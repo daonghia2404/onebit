@@ -1,0 +1,52 @@
+@import '../../assets/styles/global';
+
+.Partner {
+  padding: 80px 0 280px;
+
+  @media (max-width: 991px) {
+    padding: 0;
+    margin-bottom: 100px;
+  }
+
+  &-wrapper {
+    @media (max-width: 991px) {
+      padding: 40px 0;
+      border-top: 1px solid $acent-d2;
+      border-bottom: 1px solid $acent-d2;
+    }
+  }
+
+  &-list {
+    .slick-track {
+      display: flex;
+    }
+
+    .slick-track .slick-slide {
+      display: flex;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: 992px) {
+      .slick-list {
+        margin: 0 -30px;
+      }
+    }
+
+    &-item {
+      @media (min-width: 992px) {
+        padding: 0 30px;
+      }
+
+      img {
+        width: 100%;
+
+        @media (max-width: 991px) {
+          max-width: 155px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}

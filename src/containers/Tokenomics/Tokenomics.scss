@@ -1,0 +1,79 @@
+@import '../../assets/styles/global';
+
+.Tokenomics {
+  padding: 80px 0;
+
+  @media (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  &-header {
+    margin-bottom: 64px;
+    text-align: center;
+  }
+
+  &-subtitle {
+    color: $acent-blue;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &-title {
+    color: $white;
+  }
+
+  &-chart {
+    &-title {
+      color: $acent-blue;
+    }
+
+    &-value {
+      color: $white;
+      margin-bottom: 16px;
+    }
+
+    &-image {
+      max-width: 615px;
+      width: 100%;
+      margin: 0 auto 140px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &-list {
+    &-item {
+      padding: 16px 8px;
+      border-left: 10px solid $boston-blue;
+      border-radius: 4px;
+      background: $acent-d1;
+
+      &-col {
+        padding: 0 8px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      &-text {
+        color: $white;
+
+        span {
+          color: $acent-blue;
+          margin-right: 8px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}

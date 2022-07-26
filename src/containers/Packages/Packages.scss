@@ -1,0 +1,80 @@
+@import '../../assets/styles/global';
+
+.Packages {
+  padding: 80px 0;
+
+  @media (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  &-header {
+    margin-bottom: 64px;
+    text-align: center;
+  }
+
+  &-subtitle {
+    text-transform: uppercase;
+    color: $acent-blue;
+    margin-bottom: 16px;
+  }
+
+  &-title {
+    color: $white;
+    max-width: 510px;
+    margin: 0 auto;
+  }
+
+  &-body {
+    margin: 0 -25px;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+
+    &-col {
+      width: 100%;
+      max-width: calc(372px + 50px);
+      padding: 0 25px;
+
+      @media (max-width: 991px) {
+        margin-left: auto;
+        margin-right: auto;
+
+        &:not(:last-child) {
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+    &-item {
+      padding: 64px 16px;
+      background: $acent-d1;
+
+      &-header {
+        max-width: 244px;
+        margin: 0 auto;
+
+        &-price,
+        &-title {
+          color: $primary-lc-8;
+        }
+
+        &-price {
+          span {
+            display: block;
+          }
+        }
+      }
+
+      &-list {
+        margin: 64px 0 32px;
+
+        &-item {
+          color: $primary-lc-8;
+        }
+      }
+    }
+
+
+  }
+}

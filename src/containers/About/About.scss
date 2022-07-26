@@ -1,0 +1,75 @@
+@import '../../assets/styles/global';
+
+.About {
+  padding: 80px 0;
+
+  @media (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  &-header {
+    margin-bottom: 64px;
+    text-align: center;
+  }
+
+  &-subtitle {
+    text-transform: uppercase;
+    color: $acent-blue;
+    margin-bottom: 16px;
+  }
+
+  &-title {
+    color: $white;
+    max-width: 740px;
+    margin: 0 auto 16px;
+  }
+
+  &-body {
+    padding: 40px 80px;
+    background: $acent-d1;
+
+    @media (max-width: 991px) {
+      flex-direction: column;
+      justify-content: unset;
+      align-items: unset;
+      padding: 20px 32px;
+    }
+
+    &-item {
+      @media (max-width: 991px) {
+        margin: 0 0 36px 0;
+        width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &-icon {
+        flex: 0 0 70px;
+        max-width: 70px;
+        margin-right: 32px;
+        height: 70px;
+        display: flex;
+
+        .Icon {
+          margin: auto;
+        }
+      }
+
+      &-info {
+        flex: 1;
+
+        &-value {
+          color: $white;
+          margin-bottom: 4px;
+          line-height: 1;
+        }
+
+        &-title {
+          color: $white;
+        }
+      }
+    }
+  }
+}

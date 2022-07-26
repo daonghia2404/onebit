@@ -1,0 +1,43 @@
+@import '../../assets/styles/global';
+
+.DropdownCustom {
+  &-menu-wrapper {
+    .Button {
+      &-icon {
+        transform: rotate(180deg);
+        transition: $common-transition;
+      }
+    }
+  }
+
+  &-open {
+    .DropdownCustom-menu-wrapper {
+      .Button {
+        &-icon {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+
+  &-menu {
+    background: $acent-d2;
+    border-radius: 4px;
+    min-width: 240px;
+    overflow: hidden;
+
+    &-item {
+      padding: 10px 16px;
+      transition: $common-transition;
+
+      &:hover {
+        background: $acent-d1;
+      }
+
+      &-title {
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}

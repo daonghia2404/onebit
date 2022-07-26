@@ -1,0 +1,94 @@
+@import '../../../assets/styles/global';
+
+.NavigationMobileList {
+  position: fixed;
+  z-index: 4;
+  bottom: 54px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 54px);
+  background: $acent-dark;
+  padding: 128px 24px 24px;
+  overflow: auto;
+  transition: $common-transition;
+  transform: translateY(100%);
+
+  &.active {
+    transform: translateY(0%);
+  }
+
+  &-item {
+    position: relative;
+    padding: 18px 32px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: $common-transition;
+
+    &::before {
+      @include fullAbsolute;
+      transform: translateX(calc(-100% - 12px));
+      border-radius: 8px;
+      background: #06689D;
+      box-shadow: 0px 0px 75.6px #06689D, 0px 0px 37.8px #06689D, 0px 0px 10.8px #06689D, 0px 0px 5.4px #06689D;
+      content: '';
+      opacity: 0;
+    }
+
+    &:hover,
+    &.active {
+      background: linear-gradient(90deg, #06689D 16.78%, rgba(6, 104, 157, 0) 106.89%);
+
+      .NavigationMobileList-item {
+        &-icon {
+          .Icon {
+            .fill {
+              fill: $white;
+            }
+
+            .stroke {
+              stroke: $white;
+            }
+          }
+        }
+
+        &-title {
+          color: $white;
+        }
+      }
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      margin: 0 32px 0 0;
+
+      .Icon {
+        margin: auto;
+        width: 100%;
+        height: 100%;
+
+        .fill,
+        .stroke {
+          transition: $common-transition;
+        }
+      }
+    }
+
+    &-title {
+      text-align: center;
+      transition: $common-transition;
+      color: $neutral-7;
+      text-transform: uppercase;
+      user-select: none;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../assets/styles/global';
+
+.Collaborators {
+  padding-bottom: 160px;
+
+  @media (max-width: 991px) {
+    padding-bottom: 80px;
+  }
+
+  &-wrapper {
+    padding: 20px 0;
+    border-top: 1px solid $acent-d2;
+    border-bottom: 1px solid $acent-d2;
+  }
+
+  &-list {
+    .slick-track {
+      display: flex;
+    }
+
+    .slick-track .slick-slide {
+      display: flex;
+      height: auto;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-item {
+      img {
+        width: 100%;
+        max-width: 150px;
+        margin: auto;
+        filter: grayscale(0.9);
+      }
+    }
+  }
+}

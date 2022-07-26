@@ -1,0 +1,206 @@
+@import '../../assets/styles/global';
+
+.LaunchpadCarousel {
+  position: relative;
+  padding: 80px 0;
+
+  @media (max-width: 991px) {
+    padding: 180px 0 40px;
+  }
+
+  &-bg {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @media (max-width: 991px) {
+      height: 15%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.8;
+    }
+  }
+
+  &-carousel {
+    position: relative;
+    min-height: 640px;
+
+    @media (max-width: 991px) {
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Carousels {
+      @media (max-width: 991px) {
+        order: 3;
+      }
+    }
+
+    &-actions {
+      @media (max-width: 991px) {
+        margin-top: 8px;
+        order: 2;
+      }
+
+      &-wrapper {
+        flex: 1;
+
+        @media (max-width: 991px) {
+          overflow: auto;
+        }
+      }
+    }
+
+    &-bg {
+      @include fullAbsolute;
+      background: url('../../assets/images/bg-lauchpad.png');
+      background-size: cover;
+      background-position: center;
+
+      @media (max-width: 991px) {
+        order: 1;
+        position: relative;
+        height: 215px;
+        min-height: auto;
+        border-radius: 2px;
+        border: 2px solid $acent-blue;
+      }
+    }
+
+    &-item {
+      padding: 96px 72px;
+
+      @media (max-width: 991px) {
+        padding: 32px 0;
+      }
+
+      &-info {
+        max-width: 525px;
+
+        &-subtitle {
+          color: $acent-blue;
+          margin-bottom: 16px;
+          text-transform: uppercase;
+        }
+
+        &-title {
+          text-transform: uppercase;
+          color: rgba($white, 0.9);
+          margin-bottom: 16px;
+        }
+
+        &-description {
+          color: $primary-lc-8;
+          margin-bottom: 16px;
+          line-height: 2;
+        }
+      }
+    }
+
+    &-arrows {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    &-action-item {
+      flex: 0 0 calc(100% / 3);
+      max-width: calc(100% / 3);
+
+      @media (max-width: 991px) {
+        flex: 0 0 80%;
+        max-width: 80%;
+        white-space: nowrap;
+      }
+    }
+
+    &-action {
+      &-item {
+        position: relative;
+        padding: 24px;
+        cursor: pointer;
+        background: rgba($black, 0.9);
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 4px;
+          background: $primary;
+          transition: $common-transition;
+          transform: scaleX(0);
+          transform-origin: left;
+          top: 0;
+          left: 0;
+        }
+
+        &:hover,
+        &.active {
+          &::before {
+            transform: scaleX(1);
+          }
+
+          .LaunchpadCarousel-carousel-action-item {
+            &-title {
+              color: rgba($white, 0.9);
+            }
+
+            &-description {
+              color: rgba($white, 0.75);
+            }
+          }
+        }
+
+        &-title {
+          color: rgba($white, 0.4);
+          transition: $common-transition;
+        }
+
+        &-description {
+          color: rgba($white, 0.25);
+          transition: $common-transition;
+        }
+      }
+    }
+
+    &-arrows {
+      &-item {
+        width: 52px;
+        height: 52px;
+        background: $acent-d2;
+        display: flex;
+        cursor: pointer;
+        border: 1px solid $acent-d2;
+        transition: $common-transition;
+
+        @media (max-width: 991px) {
+          width: 24px;
+          height: 24px;
+        }
+
+        &:hover {
+          border-color: $acent-blue;
+        }
+
+        .Icon {
+          margin: auto;
+          width: 20px;
+          height: 20px;
+
+          @media (max-width: 991px) {
+            width: 12px;
+            height: 12px;
+          }
+        }
+      }
+    }
+  }
+}

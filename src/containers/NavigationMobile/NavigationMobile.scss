@@ -1,0 +1,71 @@
+@import '../../assets/styles/global';
+
+.NavigationMobile {
+  &-item {
+    position: relative;
+    cursor: pointer;
+    transition: $common-transition;
+    flex: 0 0 calc(100% / 4);
+    background: $acent-d2;
+    ;
+    max-width: calc(100% / 4);
+    height: 54px;
+
+    &::before {
+      width: 70%;
+      height: 8px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 37.8px #06689D, 0px 0px 10.8px #06689D, 0px 0px 5.4px #06689D;
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      background: $primary;
+      transform: translate(-50%, 50%) scaleX(0);
+      transition: $common-transition;
+    }
+
+    &:hover,
+    &.active {
+      background: $acent-d1;
+
+      .NavigationMobile-item {
+        &-title {
+          color: $white;
+        }
+
+        &-icon {
+          .fill {
+            fill: $white;
+          }
+
+          .stroke {
+            stroke: $white;
+          }
+        }
+      }
+
+      &::before {
+        transform: translate(-50%, 50%) scaleX(1);
+      }
+    }
+
+    &-icon {
+      width: 18px;
+      height: 18px;
+      margin: 0 auto 8px;
+
+      .fill,
+      .stroke {
+        transition: $common-transition;
+      }
+    }
+
+    &-title {
+      text-transform: uppercase;
+      text-align: center;
+      color: $neutral-7;
+      transition: $common-transition;
+    }
+  }
+}

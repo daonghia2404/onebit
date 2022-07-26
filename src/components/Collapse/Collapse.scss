@@ -1,0 +1,55 @@
+@import '../../assets/styles/global';
+
+.Collapse {
+  .ant-collapse {
+    background: transparent;
+    border: none;
+
+    &>.ant-collapse-item {
+      border: none;
+      margin-bottom: 24px;
+    }
+
+    .ant-collapse-header {
+      padding: 8px 0;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      color: $white;
+      font-size: 20px;
+      font-weight: 600;
+      color: $primary-lc-8;
+
+      .Icon {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
+
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+    }
+
+    .ant-collapse-content {
+      border: none;
+      background: transparent;
+
+      .ant-collapse-content-box {
+        padding: 8px 0;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $primary-lc-8;
+      }
+    }
+  }
+
+  &-arrow {
+    transition: $common-transition;
+    transform: rotate(180deg);
+
+    &.active {
+      transform: rotate(0deg);
+    }
+  }
+}

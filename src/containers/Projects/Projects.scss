@@ -1,0 +1,58 @@
+@import '../../assets/styles/global';
+
+.Projects {
+  padding: 80px 0;
+
+  @media (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  &-header {
+    margin-bottom: 64px;
+    text-align: center;
+  }
+
+  &-subtitle {
+    text-transform: uppercase;
+    color: $acent-blue;
+    margin-bottom: 16px;
+  }
+
+  &-title {
+    color: $white;
+    max-width: 740px;
+    margin: 0 auto 16px;
+  }
+
+  &-filters {
+    margin-bottom: 64px;
+
+    &-line {
+      flex: 1;
+      height: 1px;
+      background: $primary;
+      width: 100%;
+      margin-right: 24px;
+    }
+
+    &-control {
+      .Select {
+        .ant-select-selector {
+          background: transparent;
+          box-shadow: none;
+          border-color: transparent !important;
+        }
+      }
+    }
+  }
+
+  &-body {
+    margin-bottom: 64px;
+
+    .ProjectCard {
+      &:not(:last-child) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

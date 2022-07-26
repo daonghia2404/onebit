@@ -1,0 +1,131 @@
+@import '../../assets/styles/global';
+
+.News {
+  position: relative;
+  padding: 80px 0 160px;
+
+  @media (max-width: 991px) {
+    padding: 40px 0;
+  }
+
+  &-bg {
+    position: absolute;
+    width: 100%;
+    height: 55%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.8;
+    }
+  }
+
+  &-wrapper {
+    margin: 0 -16px;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap-reverse !important;
+    }
+
+    &-item {
+      padding: 0 16px;
+
+      &:first-child {
+        flex: 0 0 75%;
+        max-width: 75%;
+      }
+
+      &:last-child {
+        flex: 0 0 25%;
+        max-width: 25%;
+      }
+
+      @media (max-width: 991px) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+      }
+    }
+  }
+
+  &-subtitle {
+    color: $acent-blue;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  &-title {
+    color: $white;
+    margin-bottom: 60px;
+
+    @media (max-width: 991px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &-carousel-arrows {
+    max-width: 170px;
+    margin: 0 auto 60px;
+
+    @media (max-width: 991px) {
+      margin: 32px auto;
+    }
+
+    &-item {
+      width: 52px;
+      height: 52px;
+      background: $acent-d2;
+      display: flex;
+      cursor: pointer;
+      border: 1px solid $acent-d2;
+      transition: $common-transition;
+
+      &:hover {
+        border-color: $acent-blue;
+      }
+
+      .Icon {
+        margin: auto;
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &-list {
+    .slick-list {
+      margin: 0 -8px;
+    }
+
+    &-item {
+      padding: 0 8px;
+
+      &-image {
+        border: 1px solid $acent-light;
+        background: $acent-d1;
+        border-radius: 5px;
+        margin-bottom: 16px;
+        height: 180px;
+        @include centerScaleImage;
+
+        @media (max-width: 991px) {
+          height: 130px;
+        }
+      }
+
+      &-title {
+        display: block;
+        margin-bottom: 8px;
+        color: $primary-lc-8;
+      }
+
+      &-description {
+        color: $neutral-6;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import '../../assets/styles/global';
+
+.ProjectCard {
+  position: relative;
+  padding: 32px;
+  border-radius: 4px;
+  background: $acent-d2;
+
+  @media (max-width: 991px) {
+    padding: 16px;
+  }
+
+  &-wrapper {
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &-image {
+    flex: 0 0 325px;
+    max-width: 325px;
+    height: 220px;
+    margin-right: 32px;
+    border: 1px solid $acent-light;
+    border-radius: 5px;
+    overflow: hidden;
+    @include centerScaleImage;
+
+    @media (max-width: 991px) {
+      flex: 0 0 100px;
+      max-width: 100px;
+      height: 100px;
+      margin-right: 16px;
+    }
+  }
+
+  &-info {
+    flex: 1;
+
+    &-title {
+      color: $primary-lc-8;
+      margin-bottom: 16px;
+
+      @media (max-width: 991px) {
+        line-height: 1.2;
+        margin-bottom: 8px;
+        @include ellipsis(2);
+      }
+    }
+
+    &-description {
+      margin-bottom: 8px;
+      color: $neutral-6;
+    }
+
+    &-tags {
+      &-item {
+        margin: 0 16px 16px 0;
+        border-radius: 30px;
+        font-size: 12px;
+        padding: 0 8px;
+        height: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+
+        &:nth-child(odd) {
+          color: $success-1;
+          background: $success-3;
+        }
+
+        &:nth-child(even) {
+          color: $danger-1;
+          background: $danger-3;
+        }
+      }
+    }
+
+    &-list {
+      margin-bottom: -32px;
+
+      @media (max-width: 991px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: -24px;
+      }
+
+      &-item {
+        margin: 0 64px 32px 0;
+
+        @media (max-width: 991px) {
+          margin: 0 24px 24px 0;
+        }
+
+        span {
+          display: block;
+          color: $primary-lc-8;
+
+          &:not(:last-child) {
+            margin-bottom: 16px;
+
+            @media (max-width: 991px) {
+              margin-bottom: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

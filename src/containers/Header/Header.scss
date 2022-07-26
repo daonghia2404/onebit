@@ -1,0 +1,37 @@
+@import '../../assets/styles/global';
+
+.Header {
+  padding: 32px;
+
+  @media (max-width: 991px) {
+    position: fixed;
+    padding: 16px;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $acent-dark;
+  }
+
+  &-title {
+    color: $primary-lc-8;
+    line-height: 1;
+
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &-logo {
+    max-width: 110px;
+    display: none;
+
+    @media (max-width: 991px) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
