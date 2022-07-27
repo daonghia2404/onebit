@@ -1,0 +1,98 @@
+@import '../../../assets/styles/global';
+
+.Contributions {
+  .ant-col {
+    &:not(:last-child) {
+      @media (max-width: 991px) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &-item {
+    padding: 32px;
+    border-radius: 4px;
+    background: $acent-d2;
+
+    @media (max-width: 991px) {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 16px;
+    }
+
+    &-image {
+      height: 220px;
+      overflow: hidden;
+      border-radius: 5px;
+      bordeR: 1px solid $white;
+      @include centerScaleImage;
+      margin-bottom: 16px;
+
+      @media (max-width: 991px) {
+        flex: 0 0 100px;
+        max-width: 100px;
+        height: 100px;
+        margin-right: 16px;
+      }
+    }
+
+    &-info {
+      @media (max-width: 991px) {
+        flex: 1;
+      }
+    }
+
+    &-content {
+      @media (max-width: 991px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-top: 16px;
+      }
+    }
+
+    &-title,
+    &-description {
+      margin-bottom: 16px;
+      color: $primary-lc-8;
+      line-height: 1.2;
+    }
+
+    &-price {
+      color: $primary;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    &-progress {
+      margin-bottom: 16px;
+
+      &-title {
+        color: $primary-lc-8;
+        margin-bottom: 8px;
+      }
+
+      &-control {
+        margin-bottom: 8px;
+      }
+
+      &-description {
+        color: $neutral-6;
+      }
+    }
+
+    &-text {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      span {
+        color: $neutral-6;
+
+        &:last-child {
+          margin-left: 8px;
+          color: $primary;
+        }
+      }
+    }
+  }
+}

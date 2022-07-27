@@ -1,0 +1,20 @@
+@import '../../../assets/styles/global';
+
+.Id {
+  &-card {
+    padding: 32px;
+    background: $acent-d1;
+
+    @media (max-width: 991px) {
+      padding: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 64px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}

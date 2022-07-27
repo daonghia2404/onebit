@@ -6,10 +6,10 @@
     cursor: pointer;
     transition: $common-transition;
     flex: 0 0 calc(100% / 4);
-    background: $acent-d2;
-    ;
     max-width: calc(100% / 4);
+    background: $acent-d2;
     height: 54px;
+    user-select: none;
 
     &::before {
       width: 70%;

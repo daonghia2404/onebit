@@ -1,0 +1,32 @@
+@import '../../assets/styles/global';
+
+.Progress {
+  position: relative;
+
+  &-bar {
+    position: relative;
+    flex: 1;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: $primary-lc-8;
+
+    &-value {
+      @include fullAbsolute;
+      border-radius: 3px;
+      background: $primary;
+    }
+  }
+
+  &-label {
+    font-size: 14px;
+    margin-left: 12px;
+    color: $primary-lc-8;
+
+    &.bottom {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+    }
+  }
+}

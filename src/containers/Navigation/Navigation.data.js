@@ -29,12 +29,12 @@ export const dataNavigationMenu = [
   },
   {
     icon: EIconName.Stake,
-    link: ' ',
+    link: Paths.Stake,
     title: 'Stake',
   },
   {
     icon: EIconName.User,
-    link: ' ',
+    link: Paths.User,
     title: 'User',
   },
 ];

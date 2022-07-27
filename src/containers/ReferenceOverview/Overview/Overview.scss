@@ -1,0 +1,65 @@
+@import '../../../assets/styles/global';
+
+.Overview {
+  &-filter {
+    margin-bottom: 32px;
+    overflow: auto;
+
+    &-item {
+      padding: 8px 16px;
+      transition: $common-transition;
+      border-radius: 5px;
+      cursor: pointer;
+      color: $neutral-7;
+      margin-right: 64px;
+      white-space: nowrap;
+
+      @media (max-width: 991px) {
+        margin-right: 16px;
+      }
+
+      &.active,
+      &:hover {
+        color: $primary-lc-8;
+        background: $acent-d2;
+      }
+    }
+  }
+
+  &-main {
+    margin-bottom: -64px;
+
+    @media (max-width: 991px) {
+      margin-bottom: -16px;
+    }
+
+    &-item {
+      margin-bottom: 64px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &-title {
+      text-transform: uppercase;
+      color: $neutral-6;
+      margin-bottom: 4px;
+
+      span {
+        margin-right: 32px;
+      }
+
+      a {
+        display: block;
+        color: $primary;
+        text-transform: initial;
+      }
+    }
+
+    &-value {
+      color: $success-2;
+      text-transform: uppercase;
+    }
+  }
+}

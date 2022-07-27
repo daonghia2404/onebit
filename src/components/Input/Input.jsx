@@ -4,7 +4,7 @@ import { Input as AntdInput } from 'antd';
 
 import './Input.scss';
 
-const Input = ({ className, type, size, placeholder, prefix, suffix, onChange, onEnter, value }) => {
+const Input = ({ className, type, size, readOnly, placeholder, prefix, suffix, onChange, onEnter, value }) => {
   const handleKeydown = (e) => {
     if (e.key === 'Enter' || e.keyCode === 13) {
       onEnter?.();
@@ -15,6 +15,7 @@ const Input = ({ className, type, size, placeholder, prefix, suffix, onChange, o
     <div className={classNames('Input', className, { affix: suffix || prefix })}>
       <AntdInput
         type={type}
+        readOnly={readOnly}
         size={size}
         placeholder={placeholder}
         value={value}

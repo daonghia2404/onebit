@@ -2,11 +2,56 @@
 
 .Upload {
   &.disabled {
-    opacity: 0.5;
     cursor: not-allowed !important;
   }
 
   &-input {
     display: none !important;
+  }
+
+  &-wrapper {
+    &-image {
+      position: relative;
+      max-width: 285px;
+      cursor: pointer;
+
+      &.cover {
+        &::before {
+          display: none;
+        }
+      }
+
+      &::before {
+        @include fullAbsolute;
+        content: '';
+        z-index: 1;
+        background: rgba($white, 0.8);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-btn {
+      @include centerAbsolute;
+      z-index: 2;
+    }
+  }
+
+  &-preview {
+    &-item {
+      max-width: 285px;
+      height: 180px;
+      @include centerOriginImage;
+
+      img {
+        border-radius: 4px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
   }
 }

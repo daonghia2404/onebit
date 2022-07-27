@@ -31,6 +31,11 @@ const App = () => {
           <PublicRoute path={Paths.Incubator} component={Pages.Incubator} />
           <PublicRoute path={Paths.Advertising} component={Pages.Advertising} />
           <PublicRoute path={Paths.Launchpad} component={Pages.Launchpad} />
+          <PublicRoute path={Paths.WhiteList} component={Pages.WhiteList} />
+          <PublicRoute path={Paths.Reference} component={Pages.Reference} />
+          <PublicRoute path={Paths.User} component={Pages.User} />
+          <PublicRoute path={Paths.Verify} component={Pages.Verify} />
+          <PublicRoute path={Paths.Stake} component={Pages.Stake} />
           <Redirect noThrow from={Paths.Rest} to={`${LayoutPaths.Guest}${Paths.Home}`} />
         </Guest>
 

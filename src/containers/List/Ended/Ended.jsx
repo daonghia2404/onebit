@@ -15,22 +15,22 @@ const Ended = () => {
     {
       key: 'chain',
       dataIndex: 'chain',
-      title: 'Project Name',
+      title: 'Chain',
     },
     {
       key: 'token',
       dataIndex: 'token',
-      title: 'Project Name',
+      title: 'Token',
     },
     {
       key: 'swapRate',
       dataIndex: 'swapRate',
-      title: 'Project Name',
+      title: 'Swap Rate',
     },
     {
       key: 'currentPrice',
       dataIndex: 'currentPrice',
-      title: 'Project Name',
+      title: 'Current Price',
     },
     {
       key: 'roi',

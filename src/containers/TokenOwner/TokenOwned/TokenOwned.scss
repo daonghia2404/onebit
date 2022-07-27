@@ -1,0 +1,43 @@
+@import '../../../assets/styles/global';
+
+.TokenOwned {
+  table {
+    width: 100%;
+
+    thead {
+      td {
+        background: $acent-d1;
+        text-transform: uppercase;
+      }
+    }
+
+    tr {
+      &:not(:last-child) {
+        td {
+          border-bottom: 1px solid $acent-d1;
+        }
+      }
+    }
+
+    td {
+      width: 50%;
+      padding: 16px;
+      color: $neutral-6;
+      background: $acent-d2;
+      text-align: center;
+
+      span {
+        display: block;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+
+        &>span {
+          color: $primary;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

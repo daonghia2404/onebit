@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '@/containers/Header';
 import IntroductionSection from '@/containers/IntroductionSection';
@@ -9,8 +9,13 @@ import Blogs from '@/containers/Blogs';
 import Teams from '@/containers/Teams';
 import Contact from '@/containers/Contact';
 import ImageRocket from '@/assets/images/image-rocket.png';
+import { scrollToTop } from '@/utils/functions';
 
 const Incubator = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
+
   return (
     <div className="Incubator">
       <Header title="Incubator" />

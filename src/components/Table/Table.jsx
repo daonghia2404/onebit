@@ -15,6 +15,7 @@ const Table = ({ className, columns, dataSources, loading, rowKey = 'id', title 
           loading={loading}
           rowKey={rowKey}
           title={title}
+          scroll={{ x: 'auto' }}
         />
       </div>
     </div>

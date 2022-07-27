@@ -7,6 +7,7 @@
     th.ant-table-cell {
       color: $primary-lc-6;
       background: transparent;
+      white-space: nowrap;
     }
 
     .ant-table-tbody>tr.ant-table-row:hover>td,

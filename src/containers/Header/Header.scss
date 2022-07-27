@@ -13,12 +13,25 @@
     background: $acent-dark;
   }
 
+  &-back {
+    flex: 0 0 24px;
+    max-width: 24px;
+    height: 24px;
+    margin-right: 32px;
+    cursor: pointer;
+    display: flex;
+
+    .Icon {
+      margin: auto;
+    }
+  }
+
   &-title {
     color: $primary-lc-8;
     line-height: 1;
 
     @media (max-width: 991px) {
-      display: none;
+      display: none !important;
     }
   }
 

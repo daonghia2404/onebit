@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import classNames from 'classnames';
 
 import Ended from '@/containers/List/Ended';
 import Joined from '@/containers/List/Joined';
 import Upcoming from '@/containers/List/Upcoming';
+import Tab from '@/components/Tab';
 
-import { dataListTabs, EKeyListTab } from './List.data';
+import { EKeyListTab } from './List.data';
 import './List.scss';
 
 const List = () => {
-  const [activeKeyTab, setActiveKeyTab] = useState(EKeyListTab.UPCOMING);
-
-  const handleChangeActiveTab = (key) => {
-    setActiveKeyTab(key);
-  };
+  const dataListTabs = [
+    { label: 'Upcoming', value: EKeyListTab.UPCOMING, children: <Upcoming /> },
+    { label: 'Ended', value: EKeyListTab.ENDED, children: <Ended /> },
+    { label: 'Joined', value: EKeyListTab.JOINED, children: <Joined /> },
+  ];
 
   return (
     <div className="List">
@@ -25,37 +25,7 @@ const List = () => {
           </div>
 
           <div className="List-body">
-            <div className="List-tabs flex">
-              {dataListTabs.map((item) => (
-                <div
-                  key={item.value}
-                  className={classNames('List-tabs-item heading-02', { active: item.value === activeKeyTab })}
-                  onClick={() => handleChangeActiveTab(item.value)}
-                >
-                  {item.label}
-                </div>
-              ))}
-            </div>
-
-            <div className="List-tabs-main">
-              {activeKeyTab === EKeyListTab.UPCOMING && (
-                <div className="List-tabs-main-item">
-                  <Upcoming />
-                </div>
-              )}
-
-              {activeKeyTab === EKeyListTab.ENDED && (
-                <div className="List-tabs-main-item">
-                  <Ended />
-                </div>
-              )}
-
-              {activeKeyTab === EKeyListTab.JOINED && (
-                <div className="List-tabs-main-item">
-                  <Joined />
-                </div>
-              )}
-            </div>
+            <Tab defaultActiveKey={EKeyListTab.UPCOMING} data={dataListTabs} />
           </div>
         </div>
       </div>

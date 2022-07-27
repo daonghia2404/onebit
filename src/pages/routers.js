@@ -24,6 +24,11 @@ const Home = lazy(() => retryLoadComponent(() => import('@/pages/Home')));
 const Incubator = lazy(() => retryLoadComponent(() => import('@/pages/Incubator')));
 const Advertising = lazy(() => retryLoadComponent(() => import('@/pages/Advertising')));
 const Launchpad = lazy(() => retryLoadComponent(() => import('@/pages/Launchpad')));
+const WhiteList = lazy(() => retryLoadComponent(() => import('@/pages/WhiteList')));
+const Reference = lazy(() => retryLoadComponent(() => import('@/pages/Reference')));
+const User = lazy(() => retryLoadComponent(() => import('@/pages/User')));
+const Verify = lazy(() => retryLoadComponent(() => import('@/pages/Verify')));
+const Stake = lazy(() => retryLoadComponent(() => import('@/pages/Stake')));
 
 const Login = lazy(() => retryLoadComponent(() => import('@/pages/Login')));
 const Dashboard = lazy(() => retryLoadComponent(() => import('@/pages/Dashboard')));
@@ -41,6 +46,11 @@ export const Paths = {
   Incubator: '/incubator',
   Advertising: '/advertising',
   Launchpad: '/launchpad',
+  WhiteList: '/launchpad/whitelist',
+  User: '/user',
+  Reference: '/user/reference',
+  Verify: '/user/verify',
+  Stake: '/stake',
 
   Login: '/',
 
@@ -54,6 +64,11 @@ export const Pages = {
   Incubator,
   Advertising,
   Launchpad,
+  WhiteList,
+  Reference,
+  User,
+  Verify,
+  Stake,
 
   Login,
   Dashboard,

@@ -1,3 +1,16 @@
 @import '../../assets/styles/global';
 
-.Modal {}
+.Modal {
+  &-wrapper {
+    .ant-modal-content {
+      background: $acent-dark;
+      border: 1px solid $primary;
+      border-radius: 5px;
+      box-shadow: 0px 0px 3296.16px #0A1731, 0px 0px 1883.52px #0A1731, 0px 0px 1098.72px #0A1731, 0px 0px 549.36px #0A1731, 0px 0px 156.96px #0A1731, 0px 0px 78.48px #0A1731;
+    }
+
+    .ant-modal-body {
+      padding: 32px;
+    }
+  }
+}

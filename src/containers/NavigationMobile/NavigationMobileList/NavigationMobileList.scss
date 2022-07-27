@@ -23,6 +23,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: $common-transition;
+    user-select: none;
 
     &::before {
       @include fullAbsolute;
@@ -88,7 +89,6 @@
       transition: $common-transition;
       color: $neutral-7;
       text-transform: uppercase;
-      user-select: none;
     }
   }
 }

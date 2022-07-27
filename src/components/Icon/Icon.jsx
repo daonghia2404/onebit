@@ -33,6 +33,11 @@ import Layout from './Layout';
 import Zap from './Zap';
 import PhoneCall from './PhoneCall';
 import Mail from './Mail';
+import X from './X';
+import Copy from './Copy';
+import HouseGlass from './HouseGlass';
+import VeritfyCompleted from './VeritfyCompleted';
+import CircleCheck from './CircleCheck';
 
 const Icon = ({ name, className, color, onClick }) => {
   const renderIcon = () => {
@@ -95,6 +100,16 @@ const Icon = ({ name, className, color, onClick }) => {
         return <PhoneCall color={color} />;
       case EIconName.Mail:
         return <Mail color={color} />;
+      case EIconName.X:
+        return <X color={color} />;
+      case EIconName.Copy:
+        return <Copy color={color} />;
+      case EIconName.HouseGlass:
+        return <HouseGlass color={color} />;
+      case EIconName.VeritfyCompleted:
+        return <VeritfyCompleted color={color} />;
+      case EIconName.CircleCheck:
+        return <CircleCheck color={color} />;
 
       default:
         return <></>;

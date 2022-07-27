@@ -11,6 +11,22 @@
 
 html {
   font-size: 10px;
+
+  @media (max-width: 1440px) {
+    font-size: 9px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 7px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 6px;
+  }
 }
 
 body {
@@ -28,6 +44,10 @@ ul {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .container {
@@ -106,7 +126,7 @@ ul {
   font-weight: 700;
   line-height: 1.2;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 32px;
   }
 }
@@ -116,7 +136,7 @@ ul {
   font-weight: 700;
   line-height: 1.2;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 32px;
   }
 }
@@ -125,7 +145,7 @@ ul {
   font-size: 32px;
   font-weight: 600;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 24px;
   }
 }
@@ -135,7 +155,7 @@ ul {
   font-weight: 600;
   letter-spacing: 0.5px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 18px;
   }
 }
@@ -144,7 +164,7 @@ ul {
   font-size: 20px;
   font-weight: 600;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 16px;
   }
 }
@@ -154,7 +174,7 @@ ul {
   font-weight: 700;
   letter-spacing: 2px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 14px;
     letter-spacing: 1px;
   }
@@ -174,7 +194,7 @@ ul {
   font-size: 18px;
   font-weight: 500;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 14px;
   }
 }
@@ -184,42 +204,70 @@ ul {
   font-weight: 700;
   letter-spacing: 1px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1440px) {
     font-size: 12px;
   }
 }
 
 .body-01 {
   font-size: 16px;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 .body-02 {
   font-size: 14px;
   letter-spacing: 0.5px;
+
+  @media (max-width: 1440px) {
+    font-size: 12px;
+  }
 }
 
 .body-hightlight {
   font-size: 16px;
   font-weight: 500;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 .description-01 {
   font-size: 16px;
   line-height: 1.2;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 .description-02 {
   font-size: 16px;
   line-height: 1.5;
+
+  @media (max-width: 1440px) {
+    font-size: 14px;
+  }
 }
 
 .small-link-text {
   font-size: 12px;
   font-weight: 700;
+
+  @media (max-width: 1440px) {
+    font-size: 10px;
+  }
 }
 
 .small-caption {
   font-size: 12px;
+
+  @media (max-width: 1440px) {
+    font-size: 10px;
+  }
 }
 
 .ant-form {

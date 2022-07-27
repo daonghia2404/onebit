@@ -15,6 +15,7 @@ const DatePicker = ({ className, value, placeholder, disabled, disabledDate, onC
         placeholder={placeholder}
         disabled={disabled}
         onChange={onChange}
+        suffixIcon={<></>}
         disabledDate={disabledDate}
       />
     </div>

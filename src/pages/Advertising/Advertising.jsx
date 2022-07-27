@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '@/containers/Header';
 import Contact from '@/containers/Contact';
@@ -7,8 +7,12 @@ import ImageSatellite from '@/assets/images/image-satellite.png';
 import About from '@/containers/About';
 import Packages from '@/containers/Packages';
 import Faq from '@/containers/Faq';
+import { scrollToTop } from '@/utils/functions';
 
 const Advertising = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <div className="Advertising">
       <Header title="Advertising" />

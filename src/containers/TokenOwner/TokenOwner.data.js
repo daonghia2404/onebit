@@ -1,0 +1,5 @@
+export const EKeyTabTokenOwner = {
+  TOKENS_OWNED: 'TOKENS_OWNED',
+  CONTRIBUTIONS: 'CONTRIBUTIONS',
+  INSURANCE: 'INSURANCE',
+};

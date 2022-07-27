@@ -8,8 +8,9 @@ import Logo from '@/assets/images/logo.svg';
 import { Paths } from '@/pages/routers';
 
 import './Header.scss';
+import Icon, { EIconColor, EIconName } from '@/components/Icon';
 
-const Header = ({ title }) => {
+const Header = ({ title, onBack }) => {
   const [isLogged, setIsLogged] = useState(false);
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
 
@@ -20,11 +21,11 @@ const Header = ({ title }) => {
   const accountMenu = [
     {
       title: 'View profile',
-      onClick: () => handleNavigate(),
+      onClick: () => handleNavigate(Paths.User),
     },
     {
       title: 'Refer',
-      onClick: () => handleNavigate(),
+      onClick: () => handleNavigate(Paths.Reference),
     },
     {
       title: 'Log out',
@@ -36,7 +37,15 @@ const Header = ({ title }) => {
     <div className="Header">
       <div className="Header-wrapper flex items-center justify-between">
         <div className="Header-wrapper-item">
-          <div className="Header-title heading-01">{title}</div>
+          <div className="Header-title heading-01 flex items-center">
+            {onBack && (
+              <div className="Header-back" onClick={onBack}>
+                <Icon name={EIconName.ArrowLeft} color={EIconColor.WHITE} />
+              </div>
+            )}
+
+            {title}
+          </div>
           <Link to={Paths.Home} className="Header-logo">
             <img src={Logo} alt="" />
           </Link>

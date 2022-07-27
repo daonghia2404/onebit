@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from '@/containers/Header';
 import LaunchpadCarousel from '@/containers/LaunchpadCarousel';
@@ -8,8 +8,12 @@ import Projects from '@/containers/Projects';
 import Collaborators from '@/containers/Collaborators';
 import Portfolio from '@/containers/Portfolio';
 import List from '@/containers/List';
+import { scrollToTop } from '@/utils/functions';
 
 const Launchpad = () => {
+  useEffect(() => {
+    scrollToTop();
+  }, []);
   return (
     <div className="Launchpad">
       <Header title="Launchpad" />

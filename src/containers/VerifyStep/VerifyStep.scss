@@ -1,0 +1,57 @@
+@import '../../assets/styles/global';
+
+.VerifyStep {
+  position: relative;
+  padding: 80px 0;
+
+  @media (max-width: 991px) {
+    padding: 120px 0 80px;
+  }
+
+  &-bg {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.8;
+    }
+  }
+
+  &-list {
+    &-item {
+      position: relative;
+      color: $acent-light;
+      padding-left: calc(10px + 16px);
+      line-height: 1.5;
+
+      &.inactive {
+        &::before {
+          background: $danger-2;
+        }
+      }
+
+      &::before {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        content: '';
+        top: 4px;
+        left: 0;
+        border-radius: 50%;
+        background: $acent-blue;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

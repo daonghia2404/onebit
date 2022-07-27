@@ -1,0 +1,29 @@
+@import '../../assets/styles/global';
+
+.FollowChannel {
+  &-item {
+    background: $acent-d1;
+    cursor: pointer;
+    transition: $common-transition;
+
+    &:hover {
+      background: $acent-d2;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &-image {
+      flex: 0 0 40px;
+      max-width: 40px;
+      height: 40px;
+      @include centerScaleImage;
+    }
+
+    &-text {
+      padding: 0 32px;
+      color: $primary-lc-8;
+    }
+  }
+}

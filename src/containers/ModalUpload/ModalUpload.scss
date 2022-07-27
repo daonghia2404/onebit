@@ -1,0 +1,22 @@
+@import '../../assets/styles/global';
+
+.ModalUpload {
+  .FollowChannel {
+    margin-bottom: 32px;
+  }
+
+  &-title {
+    margin-bottom: 32px;
+    color: $primary-lc-8;
+  }
+
+  &-submit {
+    .ant-col {
+      @media (max-width: 991px) {
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

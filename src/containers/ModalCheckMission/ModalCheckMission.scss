@@ -1,0 +1,17 @@
+@import '../../assets/styles/global';
+
+.ModalCheckMission {
+  .FollowChannel {
+    margin-bottom: 32px;
+  }
+
+  &-title {
+    margin-bottom: 32px;
+    color: $primary-lc-8;
+  }
+
+  &-description {
+    margin-bottom: 32px;
+    color: $neutral-6;
+  }
+}

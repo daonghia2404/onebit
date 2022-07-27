@@ -1,0 +1,85 @@
+@import '../../../assets/styles/global';
+
+.PreStake {
+  &-card {
+    padding: 32px;
+    background: $acent-d1;
+
+    @media (max-width: 991px) {
+      padding: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 64px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &.info {
+      @media (max-width: 991px) {
+        max-width: 100% !important;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+
+  &-info {
+    @media (max-width: 991px) {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+
+    &-title {
+      color: $neutral-6;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    &-value {
+      color: $primary-lc-8;
+    }
+  }
+
+  &-status {
+    padding: 32px;
+    background: $acent-d1;
+    margin-bottom: 64px;
+
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      padding: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+
+    &-item {
+      color: $primary-lc-8;
+
+      &.description {
+        color: $neutral-6;
+        text-align: right;
+
+        @media (max-width: 991px) {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-top: 24px;
+        }
+      }
+
+      &-icon {
+        flex: 0 0 40px;
+        max-width: 40px;
+        height: 40px;
+        margin-right: 32px;
+      }
+    }
+  }
+}

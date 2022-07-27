@@ -1,0 +1,35 @@
+@import '../../../assets/styles/global';
+
+.EnterAmount {
+  &-card {
+    padding: 32px;
+    background: $acent-d1;
+
+    @media (max-width: 991px) {
+      padding: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 64px;
+
+      @media (max-width: 991px) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &-suffix {
+    font-size: 14px;
+    color: $success-2;
+    cursor: pointer;
+  }
+
+  &-label {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: $primary-lc-8;
+    text-align: right;
+  }
+}

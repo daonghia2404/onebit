@@ -1,6 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
-import { useLocation } from '@reach/router';
+import { navigate, useLocation } from '@reach/router';
 
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import { Paths } from '@/pages/routers';
@@ -27,7 +27,7 @@ const NavigationMobile = ({ visibleMenu, onOpenMenu }) => {
       title: 'Advertising',
     },
     {
-      icon: EIconName.Menu,
+      icon: visibleMenu ? EIconName.X : EIconName.Menu,
       title: 'Menu',
       onClick: onOpenMenu,
     },

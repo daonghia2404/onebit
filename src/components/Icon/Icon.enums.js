@@ -28,6 +28,11 @@ export const EIconName = {
   Zap: 'Zap',
   PhoneCall: 'PhoneCall',
   Mail: 'Mail',
+  X: 'X',
+  Copy: 'Copy',
+  HouseGlass: 'HouseGlass',
+  VeritfyCompleted: 'VeritfyCompleted',
+  CircleCheck: 'CircleCheck',
 };
 
 export const EIconColor = {

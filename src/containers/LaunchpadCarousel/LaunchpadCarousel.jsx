@@ -5,20 +5,21 @@ import BgNews from '@/assets/images/bg-news.png';
 import Carousels from '@/components/Carousels';
 import Button from '@/components/Button';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
+import { Paths } from '@/pages/routers';
 
 import { dataLaunchDate } from './LaunchpadCarousel.data';
 import './LaunchpadCarousel.scss';
 
 const LaunchpadCarousel = () => {
-  const [newsCarousel, setNewsCarousel] = useState(null);
+  const [refCarousel, setRefCarousel] = useState(null);
   const [currentIndexCarousel, setCurrentIndexCarousel] = useState(0);
 
   const handleAfterChange = (index) => {
     setCurrentIndexCarousel(index);
   };
 
-  const handleInitialNewsCarousel = (ref) => {
-    setNewsCarousel(ref);
+  const handleInitialCarousel = (ref) => {
+    setRefCarousel(ref);
   };
   return (
     <div className="LaunchpadCarousel">
@@ -30,7 +31,7 @@ const LaunchpadCarousel = () => {
           <div className="LaunchpadCarousel-carousel">
             <div className="LaunchpadCarousel-carousel-bg"></div>
             <Carousels
-              onInit={handleInitialNewsCarousel}
+              onInit={handleInitialCarousel}
               slidesToShow={1}
               dots={false}
               arrows={false}
@@ -49,7 +50,7 @@ const LaunchpadCarousel = () => {
                       fields.
                     </div>
                     <div className="LaunchpadCarousel-carousel-item-info-btn flex">
-                      <Button title="More Detail" />
+                      <Button title="More Detail" link={Paths.WhiteList} />
                     </div>
                   </div>
                 </div>
@@ -58,10 +59,10 @@ const LaunchpadCarousel = () => {
 
             <div className="LaunchpadCarousel-carousel-actions flex">
               <div className="LaunchpadCarousel-carousel-arrows flex items-center justify-around">
-                <div className="LaunchpadCarousel-carousel-arrows-item" onClick={() => newsCarousel.slickPrev()}>
+                <div className="LaunchpadCarousel-carousel-arrows-item" onClick={() => refCarousel.slickPrev()}>
                   <Icon name={EIconName.ArrowLeft} color={EIconColor.WHITE} />
                 </div>
-                <div className="LaunchpadCarousel-carousel-arrows-item" onClick={() => newsCarousel.slickNext()}>
+                <div className="LaunchpadCarousel-carousel-arrows-item" onClick={() => refCarousel.slickNext()}>
                   <Icon name={EIconName.ArrowRight} color={EIconColor.WHITE} />
                 </div>
               </div>
@@ -72,7 +73,7 @@ const LaunchpadCarousel = () => {
                     className={classNames('LaunchpadCarousel-carousel-action-item', {
                       active: currentIndexCarousel === index,
                     })}
-                    onClick={() => newsCarousel.slickGoTo(index)}
+                    onClick={() => refCarousel.slickGoTo(index)}
                   >
                     <div className="LaunchpadCarousel-carousel-action-item-title heading-03">{item.title}</div>
                     <div className="LaunchpadCarousel-carousel-action-item-description headline">

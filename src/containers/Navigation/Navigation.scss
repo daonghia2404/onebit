@@ -27,6 +27,7 @@
       margin-right: auto;
       transition: $common-transition;
       transform: translateX(4px);
+      user-select: none;
 
       &::before {
         @include fullAbsolute;

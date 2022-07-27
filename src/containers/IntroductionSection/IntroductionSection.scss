@@ -26,8 +26,12 @@
   }
 
   &-wrapper {
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
     @media (max-width: 991px) {
-      flex-direction: column-reverse;
+      flex-direction: column-reverse !important;
       align-items: unset;
       justify-content: unset;
     }
@@ -52,6 +56,10 @@
   &-description {
     margin-bottom: 32px;
     color: $acent-light;
+  }
+
+  &-link {
+    color: $primary;
   }
 
   &-image {

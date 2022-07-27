@@ -8,6 +8,7 @@ import './Packages.scss';
 
 const Packages = () => {
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
+
   return (
     <div className="Packages">
       <div className="container">

@@ -22,6 +22,7 @@ const Select = ({
   allowClear,
   dropdownClassName,
   paginate,
+  borderless,
   onSearch,
   onLoadMore,
   onChange,
@@ -77,6 +78,7 @@ const Select = ({
         className="Select-control"
         placement={placement}
         value={value}
+        bordered={!borderless}
         showSearch={showSearch}
         placeholder={placeholder}
         defaultValue={defaultValue}

@@ -23,7 +23,12 @@ const Projects = () => {
           <div className="Projects-filters flex items-center">
             <div className="Projects-filters-line"></div>
             <div className="Projects-filters-control">
-              <Select placement="bottomRight" defaultValue={dataProjectsFilter[0]} options={dataProjectsFilter} />
+              <Select
+                borderless
+                placement="bottomRight"
+                defaultValue={dataProjectsFilter[0]}
+                options={dataProjectsFilter}
+              />
             </div>
           </div>
 
