@@ -5,6 +5,7 @@
     background: $acent-d1;
     cursor: pointer;
     transition: $common-transition;
+    padding-right: 16px;
 
     &:hover {
       background: $acent-d2;
@@ -23,6 +24,16 @@
 
     &-text {
       padding: 0 32px;
+      color: $primary-lc-8;
+      line-height: 1.2;
+
+      @media (max-width: 1200px) {
+        padding: 0 16px;
+      }
+    }
+
+    &-count {
+      margin-left: auto;
       color: $primary-lc-8;
     }
   }

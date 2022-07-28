@@ -1,0 +1,47 @@
+@import '../../assets/styles/global';
+
+.Comment {
+  padding: 32px 0;
+
+  &-name {
+    color: $primary-lc-8;
+    margin-bottom: 4px;
+  }
+
+  &-time {
+    color: $primary-lc-8;
+    margin-bottom: 8px;
+  }
+
+  &-content {
+    color: $primary-lc-8;
+    margin-bottom: 8px;
+  }
+
+  &-actions {
+    &-item {
+      margin-right: 32px;
+      color: $acent-light;
+      cursor: pointer;
+
+      .Icon {
+        max-width: 24px;
+        flex: 0 0 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-control {
+    margin-top: 32px;
+    padding: 32px;
+    background-color: $acent-d1;
+
+    .Button {
+      margin-top: 32px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+  }
+}

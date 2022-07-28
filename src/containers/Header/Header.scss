@@ -3,7 +3,7 @@
 .Header {
   padding: 32px;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     position: fixed;
     padding: 16px;
     z-index: 5;
@@ -29,8 +29,9 @@
   &-title {
     color: $primary-lc-8;
     line-height: 1;
+    white-space: nowrap;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       display: none !important;
     }
   }
@@ -39,7 +40,7 @@
     max-width: 110px;
     display: none;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       display: block;
     }
 

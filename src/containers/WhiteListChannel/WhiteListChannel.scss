@@ -1,0 +1,281 @@
+@import '../../assets/styles/global';
+
+.WhiteListChannel {
+  position: relative;
+  padding: 80px 0;
+
+  @media (max-width: 1200px) {
+    padding: 100px 0 40px;
+  }
+
+  &-bg {
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      opacity: 0.8;
+    }
+  }
+
+  &-channel {
+    position: relative;
+    border: 2px solid $acent-blue;
+    border-radius: 2px;
+    padding: 64px 64px 128px;
+
+    @media (max-width: 1200px) {
+      padding: 0;
+      border: none;
+      border-radius: 0;
+    }
+
+    &-bg {
+      @include fullAbsolute;
+      @include centerScaleImage;
+      z-index: -1;
+
+      @media (max-width: 1200px) {
+        border: 2px solid $acent-blue;
+        border-radius: 2px;
+        position: relative;
+        margin-bottom: 16px;
+      }
+    }
+
+    &-info {
+      &-tags {
+        &-item {
+          margin: 0 16px 16px 0;
+          border-radius: 30px;
+          font-size: 12px;
+          padding: 0 8px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: uppercase;
+
+          &:nth-child(odd) {
+            color: $success-1;
+            background: $success-3;
+          }
+
+          &:nth-child(even) {
+            color: $danger-1;
+            background: $danger-3;
+          }
+        }
+      }
+
+      &-title {
+        margin-bottom: 16px;
+        color: $primary-lc-8;
+      }
+
+      &-socials {
+        max-width: 360px;
+        margin-bottom: 16px;
+      }
+
+      &-description {
+        margin-bottom: 32px;
+        line-height: 2;
+        color: $primary-lc-8;
+      }
+
+      &-requirement {
+        padding: 16px;
+        background: $acent-d1;
+
+        .Button {
+          margin-top: 12px;
+        }
+
+        &-title {
+          color: $primary-lc-8;
+          margin-bottom: 10px;
+        }
+
+        table {
+          margin: 0 -8px;
+          width: 100%;
+
+          .Button {
+            margin: 0 0 0 32px;
+          }
+
+          tr.break-mb {
+            @media (max-width: 1200px) {
+              td {
+                display: block;
+                width: 160%;
+              }
+
+              .flex {
+                flex-direction: column;
+                align-items: unset;
+                justify-content: unset;
+
+                .Button {
+                  width: 100%;
+                  margin-top: 8px;
+                }
+              }
+            }
+          }
+
+          td {
+            padding: 8px;
+
+            &:first-child {
+              width: 30%;
+              color: $primary-lc-8;
+              white-space: nowrap;
+            }
+
+            &:last-child {
+              width: 70%;
+              color: $neutral-6;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-contract {
+    position: relative;
+    padding: 0px 8px 0 16px;
+    background: $acent-d2;
+    border: 1px solid $primary;
+    border-radius: 4px;
+    width: fit-content;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 16px;
+    }
+
+    &-label {
+      font-size: 14px;
+      color: $primary-lc-8;
+      margin-bottom: 4px;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    .Select {
+      min-width: 216px;
+
+      .ant-select {
+        .ant-select-selector {
+          padding-top: 0;
+          padding-bottom: 0;
+          height: auto;
+        }
+      }
+    }
+
+    .Icon,
+    &-icon {
+      flex: 0 0 24px;
+      max-width: 24px;
+      height: 24px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &-copy {
+      position: absolute;
+      right: 54px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      cursor: pointer;
+    }
+  }
+
+  &-claim {
+    margin-top: 16px;
+
+    &-text {
+      color: $primary-lc-8;
+      margin-bottom: 16px;
+    }
+
+    .Button {
+      margin-top: 0;
+
+      @media (max-width: 1200px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &-buy {
+    margin-top: 16px;
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+
+    &-suffix {
+      font-size: 14px;
+      color: $acent-blue;
+      cursor: pointer;
+    }
+  }
+
+  &-actions {
+    height: 100%;
+
+    @media (max-width: 1200px) {
+      margin-bottom: 32px;
+      height: auto;
+      align-items: flex-start;
+    }
+  }
+
+  &-progress {
+    margin-top: auto;
+    transform: translateY(30%);
+
+    @media (max-width: 1200px) {
+      transform: translateY(0);
+    }
+
+    &-subtitle {
+      color: $primary-lc-8;
+      margin-bottom: 8px;
+    }
+
+    &-hour {
+      color: $primary-lc-8;
+      margin-bottom: 32px;
+    }
+
+    &-title {
+      color: $primary-lc-8;
+      margin-bottom: 8px;
+    }
+
+    &-control {
+      margin-bottom: 8px;
+    }
+
+    &-description {
+      color: $neutral-6;
+    }
+  }
+}

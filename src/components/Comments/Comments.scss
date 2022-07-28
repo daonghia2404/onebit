@@ -1,0 +1,26 @@
+@import '../../assets/styles/global';
+
+.Comments {
+  &-control {
+    padding: 32px;
+    background-color: $acent-d1;
+
+    .Button {
+      margin-top: 32px;
+      max-width: 340px;
+      margin: 0 auto;
+    }
+  }
+
+  &-list {
+    &-item {
+      &-replies {
+        padding-left: 64px;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $acent-d2;
+      }
+    }
+  }
+}

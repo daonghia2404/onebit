@@ -3,7 +3,7 @@
 .Contributions {
   .ant-col {
     &:not(:last-child) {
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         margin-bottom: 32px;
       }
     }
@@ -14,7 +14,7 @@
     border-radius: 4px;
     background: $acent-d2;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       display: flex;
       flex-wrap: wrap;
       padding: 16px;
@@ -28,7 +28,7 @@
       @include centerScaleImage;
       margin-bottom: 16px;
 
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         flex: 0 0 100px;
         max-width: 100px;
         height: 100px;
@@ -37,13 +37,13 @@
     }
 
     &-info {
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         flex: 1;
       }
     }
 
     &-content {
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         flex: 0 0 100%;
         max-width: 100%;
         margin-top: 16px;

@@ -33,6 +33,7 @@ export const EIconName = {
   HouseGlass: 'HouseGlass',
   VeritfyCompleted: 'VeritfyCompleted',
   CircleCheck: 'CircleCheck',
+  Heart: 'Heart',
 };
 
 export const EIconColor = {

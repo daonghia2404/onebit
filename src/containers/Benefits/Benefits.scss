@@ -3,7 +3,7 @@
 .Benefits {
   padding: 80px 0;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     padding: 40px 0;
   }
 
@@ -34,7 +34,7 @@
       display: flex;
       align-items: center;
 
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         flex-wrap: wrap;
         padding: 32px 0;
       }
@@ -49,14 +49,14 @@
             &-description {
               text-align: right;
 
-              @media (max-width: 991px) {
+              @media (max-width: 1200px) {
                 text-align: left;
               }
             }
           }
         }
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           flex-direction: row;
         }
       }
@@ -67,7 +67,7 @@
         padding: 0 16px;
         display: flex;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           flex: 0 0 100%;
           max-width: 100%;
           margin-bottom: 16px;
@@ -85,7 +85,7 @@
         max-width: 50%;
         padding: 0 16px;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           flex: 0 0 100%;
           max-width: 100%;
         }

@@ -3,7 +3,7 @@
 .About {
   padding: 80px 0;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     padding: 40px 0;
   }
 
@@ -28,7 +28,7 @@
     padding: 40px 80px;
     background: $acent-d1;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       flex-direction: column;
       justify-content: unset;
       align-items: unset;
@@ -36,7 +36,7 @@
     }
 
     &-item {
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         margin: 0 0 36px 0;
         width: 100%;
 

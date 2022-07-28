@@ -32,6 +32,7 @@ const App = () => {
           <PublicRoute path={Paths.Advertising} component={Pages.Advertising} />
           <PublicRoute path={Paths.Launchpad} component={Pages.Launchpad} />
           <PublicRoute path={Paths.WhiteList} component={Pages.WhiteList} />
+          <PublicRoute path={Paths.WhiteListDetail} component={Pages.WhiteListDetail} />
           <PublicRoute path={Paths.Reference} component={Pages.Reference} />
           <PublicRoute path={Paths.User} component={Pages.User} />
           <PublicRoute path={Paths.Verify} component={Pages.Verify} />

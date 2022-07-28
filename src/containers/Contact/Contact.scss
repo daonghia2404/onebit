@@ -4,7 +4,7 @@
   padding: 80px 0;
 
   &-wrapper {
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       flex-direction: column;
       justify-content: unset;
     }
@@ -15,7 +15,7 @@
     text-transform: uppercase;
     margin-bottom: 64px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       margin-bottom: 32px;
     }
   }
@@ -66,7 +66,7 @@
     padding: 38px 34px;
     background: $acent-d1;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       width: 100%;
       max-width: 345px;
       margin: 0 auto;

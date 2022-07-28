@@ -5,20 +5,20 @@
     padding: 32px;
     background: $acent-d1;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       padding: 16px;
     }
 
     &:not(:last-child) {
       margin-bottom: 64px;
 
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         margin-bottom: 32px;
       }
     }
 
     &.info {
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         max-width: 100% !important;
         flex-direction: column;
         justify-content: center;
@@ -28,7 +28,7 @@
   }
 
   &-info {
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       &:not(:last-child) {
         margin-bottom: 32px;
       }
@@ -51,7 +51,7 @@
     background: $acent-d1;
     margin-bottom: 64px;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       flex-wrap: wrap;
       padding: 16px;
     }
@@ -67,7 +67,7 @@
         color: $neutral-6;
         text-align: right;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           flex: 0 0 100%;
           max-width: 100%;
           margin-top: 24px;

@@ -25,6 +25,7 @@ const Incubator = lazy(() => retryLoadComponent(() => import('@/pages/Incubator'
 const Advertising = lazy(() => retryLoadComponent(() => import('@/pages/Advertising')));
 const Launchpad = lazy(() => retryLoadComponent(() => import('@/pages/Launchpad')));
 const WhiteList = lazy(() => retryLoadComponent(() => import('@/pages/WhiteList')));
+const WhiteListDetail = lazy(() => retryLoadComponent(() => import('@/pages/WhiteListDetail')));
 const Reference = lazy(() => retryLoadComponent(() => import('@/pages/Reference')));
 const User = lazy(() => retryLoadComponent(() => import('@/pages/User')));
 const Verify = lazy(() => retryLoadComponent(() => import('@/pages/Verify')));
@@ -47,6 +48,7 @@ export const Paths = {
   Advertising: '/advertising',
   Launchpad: '/launchpad',
   WhiteList: '/launchpad/whitelist',
+  WhiteListDetail: '/launchpad/whitelist/detail',
   User: '/user',
   Reference: '/user/reference',
   Verify: '/user/verify',
@@ -65,6 +67,7 @@ export const Pages = {
   Advertising,
   Launchpad,
   WhiteList,
+  WhiteListDetail,
   Reference,
   User,
   Verify,

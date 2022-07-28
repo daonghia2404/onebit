@@ -38,6 +38,7 @@ import Copy from './Copy';
 import HouseGlass from './HouseGlass';
 import VeritfyCompleted from './VeritfyCompleted';
 import CircleCheck from './CircleCheck';
+import Heart from './Heart';
 
 const Icon = ({ name, className, color, onClick }) => {
   const renderIcon = () => {
@@ -110,6 +111,8 @@ const Icon = ({ name, className, color, onClick }) => {
         return <VeritfyCompleted color={color} />;
       case EIconName.CircleCheck:
         return <CircleCheck color={color} />;
+      case EIconName.Heart:
+        return <Heart color={color} />;
 
       default:
         return <></>;

@@ -6,12 +6,12 @@
   border-radius: 4px;
   background: $acent-d2;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     padding: 16px;
   }
 
   &-wrapper {
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       flex-wrap: wrap;
     }
   }
@@ -26,7 +26,7 @@
     overflow: hidden;
     @include centerScaleImage;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       flex: 0 0 100px;
       max-width: 100px;
       height: 100px;
@@ -41,7 +41,7 @@
       color: $primary-lc-8;
       margin-bottom: 16px;
 
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         line-height: 1.2;
         margin-bottom: 8px;
         @include ellipsis(2);
@@ -80,7 +80,7 @@
     &-list {
       margin-bottom: -32px;
 
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         flex: 0 0 100%;
         max-width: 100%;
         margin-bottom: -24px;
@@ -89,7 +89,7 @@
       &-item {
         margin: 0 64px 32px 0;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           margin: 0 24px 24px 0;
         }
 
@@ -100,7 +100,7 @@
           &:not(:last-child) {
             margin-bottom: 16px;
 
-            @media (max-width: 991px) {
+            @media (max-width: 1200px) {
               margin-bottom: 4px;
             }
           }

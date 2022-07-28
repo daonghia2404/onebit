@@ -21,7 +21,7 @@
           &-title {
             color: $primary-lc-8;
 
-            @media (max-width: 991px) {
+            @media (max-width: 1200px) {
               display: block;
             }
           }
@@ -38,7 +38,7 @@
         margin-bottom: 4px;
         transition: $common-transition;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           display: none;
         }
       }
@@ -50,7 +50,7 @@
         margin-bottom: 8px;
         white-space: nowrap;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           display: none;
         }
       }
@@ -62,7 +62,7 @@
         background: $neutral-7;
         transition: $common-transition;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           margin-top: auto;
         }
       }

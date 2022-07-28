@@ -3,7 +3,7 @@
 .List {
   padding: 80px 0;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     padding: 40px 0;
   }
 
@@ -37,7 +37,7 @@
       &:not(:last-child) {
         margin-right: 64px;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           margin-right: 32px;
         }
       }

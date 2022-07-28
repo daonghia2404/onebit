@@ -11,7 +11,7 @@
     border-radius: 4px;
     background: $acent-d2;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1200px) {
       padding: 24px;
       align-items: flex-start !important;
       flex-wrap: wrap;
@@ -22,7 +22,7 @@
       max-width: 300px;
       margin-right: 32px;
 
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         flex: 0 0 100px;
         max-width: 100px;
         margin-right: 16px;
@@ -34,7 +34,7 @@
     }
 
     &-info {
-      @media (max-width: 991px) {
+      @media (max-width: 1200px) {
         flex: 1;
       }
 
@@ -42,7 +42,7 @@
         margin-bottom: 16px;
         color: $primary-lc-8;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           @include ellipsis(2);
           line-height: 1.2;
           margin-bottom: 8px;
@@ -76,7 +76,7 @@
       &-date {
         color: $primary-lc-8;
 
-        @media (max-width: 991px) {
+        @media (max-width: 1200px) {
           flex: 0 0 100%;
           max-width: 100%;
         }

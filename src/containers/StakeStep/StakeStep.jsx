@@ -8,7 +8,7 @@ import Completed from '@/containers/StakeStep/Completed';
 import './StakeStep.scss';
 
 const StakeStep = () => {
-  const [currentStep, setCurrentSTep] = useState(2);
+  const [currentStep, setCurrentSTep] = useState(1);
 
   const handleNextStep = () => {
     setCurrentSTep(currentStep + 1);

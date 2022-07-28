@@ -4,6 +4,9 @@ import { navigate } from '@reach/router';
 import { Paths } from '@/pages/routers';
 import Header from '@/containers/Header';
 import { scrollToTop } from '@/utils/functions';
+import WhiteListOverview from '@/containers/WhiteListOverview';
+import WhiteListResponses from '@/containers/WhiteListResponses';
+import WhiteListChannel from '@/containers/WhiteListChannel';
 
 const WhiteList = () => {
   const handleNavigateBack = () => {
@@ -17,6 +20,9 @@ const WhiteList = () => {
   return (
     <div className="WhiteList">
       <Header title="WhiteList" onBack={handleNavigateBack} />
+      <WhiteListChannel isDetail isClaim />
+      <WhiteListOverview />
+      <WhiteListResponses />
     </div>
   );
 };

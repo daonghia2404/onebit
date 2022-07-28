@@ -1,0 +1,18 @@
+@import '../../assets/styles/global';
+
+.WhiteListResponses {
+  padding: 80px 0;
+
+  &-header {
+    margin-bottom: 32px;
+  }
+
+  &-title {
+    text-align: center;
+    color: $primary-lc-8;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 40px 0;
+  }
+}

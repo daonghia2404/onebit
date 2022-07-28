@@ -1,0 +1,58 @@
+@import '../../../assets/styles/global';
+
+.OverviewWhiteList {
+  &-wrapper {
+    &-item {
+      &:first-child {
+        flex: 0 0 200px;
+        max-width: 200px;
+        margin-right: 16px;
+      }
+
+      &:last-child {
+        flex: 1
+      }
+
+      @media (max-width: 1200px) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+
+  &-menu {
+    position: sticky;
+    top: 16px;
+
+    @media (max-width: 1200px) {
+      position: relative;
+      top: unset;
+      display: flex;
+      overflow: auto;
+    }
+
+    &-item {
+      color: $neutral-6;
+      padding: 16px 32px;
+      line-height: 1.2;
+      background: $acent-d1;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: $common-transition;
+
+      @media (max-width: 1200px) {
+        padding: 16px;
+      }
+
+      &:hover,
+      &.active {
+        background: $acent-d2;
+        color: $primary-lc-8;
+      }
+    }
+  }
+}

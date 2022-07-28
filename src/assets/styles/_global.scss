@@ -56,7 +56,7 @@ ul {
   width: 100%;
   margin: 0 auto;
 
-  @media (max-width: 991px) {
+  @media (max-width: 1200px) {
     padding: 0 16px;
   }
 }
@@ -306,5 +306,38 @@ ul {
   .ant-form-item-has-error :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover,
   .ant-form-item-has-error :not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper:hover {
     background: transparent;
+  }
+}
+
+.style-content {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 16px;
+    color: $primary-lc-8;
+  }
+
+  p {
+    margin-bottom: 16px;
+    color: $neutral-6;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 13px;
+    margin-bottom: 16px;
+
+    li {
+      color: $neutral-6;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 16px auto;
   }
 }

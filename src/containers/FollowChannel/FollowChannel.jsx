@@ -3,7 +3,7 @@ import React from 'react';
 import { dataFollowChannel } from './FollowChannel.data';
 import './FollowChannel.scss';
 
-const FollowChannel = () => {
+const FollowChannel = ({ showCount }) => {
   return (
     <div className="FollowChannel">
       {dataFollowChannel.map((item, index) => (
@@ -12,6 +12,7 @@ const FollowChannel = () => {
             <img src={item.image} alt="" />
           </div>
           <div className="FollowChannel-item-text body-01">{item.label}</div>
+          {showCount && <div className="FollowChannel-item-count heading-03">+10</div>}
         </div>
       ))}
     </div>
