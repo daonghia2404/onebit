@@ -12,6 +12,7 @@ export const Carousels = ({
   dots = true,
   arrows = true,
   infinite = true,
+  variableWidth,
   slidesToShow = 1,
   slidesToScroll = 1,
   slidesPerRow = 1,
@@ -43,6 +44,7 @@ export const Carousels = ({
     slidesToShow,
     slidesToScroll,
     responsive,
+    variableWidth,
     // nextArrow: renderNextArrow(),
     // prevArrow: renderPrevArrow(),
     beforeChange: (index) => {

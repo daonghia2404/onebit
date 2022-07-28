@@ -3,6 +3,7 @@ import React from 'react';
 import ImageAvatar from '@/assets/images/image-avatar.png';
 import Carousels from '@/components/Carousels';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
+import { BREAKPOINT } from '@/redux/reducers/ui';
 
 import './Teams.scss';
 
@@ -16,7 +17,23 @@ const Teams = () => {
             <div className="Teams-title big-title-02">Meet our team of experts</div>
           </div>
 
-          <Carousels className="Teams-carousel" centerMode arrows={false} slidesToShow={1} slidesToScroll={1} autoplay>
+          <Carousels
+            className="Teams-carousel"
+            variableWidth
+            centerMode
+            arrows={false}
+            slidesToShow={1}
+            slidesToScroll={1}
+            autoplay
+            responsive={[
+              {
+                breakpoint: BREAKPOINT,
+                settings: {
+                  variableWidth: false,
+                },
+              },
+            ]}
+          >
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <div key={item} className="Teams-carousel-item">
                 <div className="Teams-carousel-item-avatar">

@@ -6,6 +6,7 @@ import LogoGoogle from '@/assets/images/logo-google.svg';
 import LogoMicrosoft from '@/assets/images/logo-microsoft.svg';
 import LogoFacebook from '@/assets/images/logo-facebook.svg';
 import Carousels from '@/components/Carousels';
+import { BREAKPOINT } from '@/redux/reducers/ui';
 
 import './Partner.scss';
 
@@ -22,7 +23,7 @@ const Partner = () => {
             arrows={false}
             responsive={[
               {
-                breakpoint: 991,
+                breakpoint: BREAKPOINT,
                 settings: {
                   autoplay: true,
                   slidesToShow: 1,

@@ -1,7 +1,4 @@
-/* eslint-disable no-useless-escape */
-import { SyntheticEvent } from 'react';
 import { notification } from 'antd';
-import { Rule } from 'antd/lib/form';
 import moment from 'moment';
 
 import { EFormat, ETypeNotification } from '@/common/enums';

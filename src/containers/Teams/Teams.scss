@@ -27,6 +27,8 @@
       .Teams-carousel-item {
         opacity: 1;
         transform: scale(1);
+        z-index: 2;
+        border-color: $acent-blue;
       }
     }
 
@@ -63,12 +65,13 @@
     }
 
     &-item {
+      position: relative;
       text-align: center;
       padding: 80px 16px;
       border-radius: 3px;
       background: $acent-d1;
-      border: 2px solid $acent-blue;
-      opacity: 0.8;
+      border: 2px solid transparent;
+      opacity: 0.7;
       transition: $common-transition;
       transform: scale(0.8);
 

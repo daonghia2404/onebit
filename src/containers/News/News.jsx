@@ -7,6 +7,7 @@ import { Paths } from '@/pages/routers';
 import Button from '@/components/Button';
 import Carousels from '@/components/Carousels';
 import BgNews from '@/assets/images/bg-news.png';
+import { BREAKPOINT } from '@/redux/reducers/ui';
 
 import './News.scss';
 
@@ -56,7 +57,7 @@ const News = () => {
               onInit={handleInitialNewsCarousel}
               responsive={[
                 {
-                  breakpoint: 991,
+                  breakpoint: BREAKPOINT,
                   settings: {
                     infinite: true,
                     centerMode: true,
