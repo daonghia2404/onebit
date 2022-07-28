@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BgWhiteListChannel from '@/assets/images/bg-whitelist-channel.png';
+import BgWhiteListChannel from '@/assets/images/bg-lauchpad.png';
 
 import { dataWhiteListInfo } from './WhiteListDetailInfo.data';
 import './WhiteListDetailInfo.scss';

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import Select from '@/components/Select';
 import BgNews from '@/assets/images/bg-news.png';
-import BgWhiteListChannel from '@/assets/images/bg-whitelist-channel.png';
+import BgWhiteListChannel from '@/assets/images/bg-lauchpad.png';
 import { dataSocials } from '@/containers/Footer/Footer.data';
 import Button from '@/components/Button';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
