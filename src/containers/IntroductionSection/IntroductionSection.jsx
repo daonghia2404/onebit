@@ -1,16 +1,11 @@
 import React from 'react';
-
-import BgNews from '@/assets/images/bg-news.png';
+import classNames from 'classnames';
 
 import './IntroductionSection.scss';
-import classNames from 'classnames';
 
 const IntroductionSection = ({ image, title, description, link, reverse }) => {
   return (
     <div className="IntroductionSection">
-      <div className="IntroductionSection-bg">
-        <img src={BgNews} alt="" />
-      </div>
       <div className="container">
         <div className={classNames('IntroductionSection-wrapper flex items-center justify-between', { reverse })}>
           <div className="IntroductionSection-wrapper-item">

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-import BgNews from '@/assets/images/bg-news.png';
 import Carousels from '@/components/Carousels';
 import Button from '@/components/Button';
 import Icon, { EIconColor, EIconName } from '@/components/Icon';
@@ -24,9 +23,6 @@ const LaunchpadCarousel = () => {
   return (
     <div className="LaunchpadCarousel">
       <div className="container">
-        <div className="LaunchpadCarousel-bg">
-          <img src={BgNews} alt="" />
-        </div>
         <div className="LaunchpadCarousel-wrapper">
           <div className="LaunchpadCarousel-carousel">
             <div className="LaunchpadCarousel-carousel-bg"></div>

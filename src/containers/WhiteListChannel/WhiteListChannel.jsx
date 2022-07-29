@@ -3,7 +3,6 @@ import { Col, Form, Row } from 'antd';
 import { useSelector } from 'react-redux';
 
 import Select from '@/components/Select';
-import BgNews from '@/assets/images/bg-news.png';
 import BgWhiteListChannel from '@/assets/images/bg-lauchpad.png';
 import { dataSocials } from '@/containers/Footer/Footer.data';
 import Button from '@/components/Button';
@@ -66,9 +65,6 @@ const WhiteListChannel = ({ isBuy, isClaim, isDetail, isJoin }) => {
 
   return (
     <div className="WhiteListChannel">
-      <div className="WhiteListChannel-bg">
-        <img src={BgNews} alt="" />
-      </div>
       <div className="container">
         <Form form={form} layout="vertical" className="WhiteListChannel-wrapper">
           <div className="WhiteListChannel-channel">

@@ -6,7 +6,6 @@ import Icon, { EIconColor, EIconName } from '@/components/Icon';
 import { Paths } from '@/pages/routers';
 import Button from '@/components/Button';
 import Carousels from '@/components/Carousels';
-import BgNews from '@/assets/images/bg-news.png';
 import { BREAKPOINT } from '@/redux/reducers/ui';
 
 import './News.scss';
@@ -41,9 +40,6 @@ const News = () => {
 
   return (
     <div className="News">
-      <div className="News-bg">
-        <img src={BgNews} alt="" />
-      </div>
       <div className="container">
         <div className="News-wrapper flex justify-between flex-wrap">
           <div className="News-wrapper-item">

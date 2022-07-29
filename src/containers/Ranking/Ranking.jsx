@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import IconMetaRank4 from '@/assets/icons/icon-meta-rank-4.svg';
 import Button from '@/components/Button';
 import { EIconColor } from '@/components/Icon';
-import BgNews from '@/assets/images/bg-news.png';
 import Carousels from '@/components/Carousels';
 import ModalCheckMission from '@/containers/ModalCheckMission';
 
@@ -45,9 +44,6 @@ const Ranking = () => {
 
   return (
     <div className="Ranking">
-      <div className="Ranking-bg">
-        <img src={BgNews} alt="" />
-      </div>
       <div className="container">
         <div className="Ranking-wrapper">
           <div className="Ranking-my-rank">

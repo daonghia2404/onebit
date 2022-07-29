@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Step from '@/components/Step';
-import BgNews from '@/assets/images/bg-news.png';
 import Information from '@/containers/VerifyStep/Information';
 import Id from '@/containers/VerifyStep/Id';
 import FaceRecognition from '@/containers/VerifyStep/FaceRecognition';
@@ -52,9 +51,6 @@ const VerifyStep = () => {
 
   return (
     <div className="VerifyStep">
-      <div className="VerifyStep-bg">
-        <img src={BgNews} alt="" />
-      </div>
       <div className="container">
         <div className="VerifyStep-wrapper">
           <Step currentStep={currentStep} data={dataVerifyStep} onChange={setCurrentSTep} />
