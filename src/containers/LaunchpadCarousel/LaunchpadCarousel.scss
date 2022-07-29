@@ -32,6 +32,11 @@
   &-carousel {
     position: relative;
     min-height: 640px;
+    border: 2px solid $acent-blue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background: linear-gradient(71.83deg, rgba(11, 11, 34, 0.3) 37.95%, rgba(11, 11, 34, 0) 112%);
 
     @media (max-width: 1200px) {
       min-height: auto;
@@ -40,12 +45,17 @@
     }
 
     .Carousels {
+      width: 100%;
+
       @media (max-width: 1200px) {
         order: 3;
       }
     }
 
     &-actions {
+      width: 100%;
+      margin-top: auto;
+
       @media (max-width: 1200px) {
         margin-top: 8px;
         order: 2;
@@ -65,6 +75,7 @@
       background: url('../../assets/images/bg-lauchpad.png');
       background-size: cover;
       background-position: center;
+      z-index: -1;
 
       @media (max-width: 1200px) {
         order: 1;
