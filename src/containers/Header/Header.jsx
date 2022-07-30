@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 import { Link, navigate } from '@reach/router';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import Button from '@/components/Button';
 import DropdownCustom from '@/components/DropdownCustom';
 import Logo from '@/assets/images/logo.svg';
 import { Paths } from '@/pages/routers';
+import Icon, { EIconColor, EIconName } from '@/components/Icon';
+import { uiActions } from '@/redux/actions';
 
 import './Header.scss';
-import Icon, { EIconColor, EIconName } from '@/components/Icon';
 
 const Header = ({ title, onBack }) => {
+  const dispatch = useDispatch();
   const [isLogged, setIsLogged] = useState(false);
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
 
   const handleNavigate = (link) => {
-    if (link) navigate(link);
+    if (link) {
+      navigate(link);
+      dispatch(uiActions.setVisibleMenu(false));
+    }
   };
 
   const accountMenu = [

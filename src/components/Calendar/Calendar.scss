@@ -43,17 +43,36 @@
     }
   }
 
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected,
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover,
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected,
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover {
+    position: relative;
+    background: $acent-d1 !important; 
+  }
+
   .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected .ant-picker-calendar-date,
   .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover .ant-picker-calendar-date,
   .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected .ant-picker-calendar-date-today,
   .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell-selected:hover .ant-picker-calendar-date-today {
+    background: transparent;
+    position: unset;
+
+    &::before {
+      @include fullAbsolute;
+      content: '';
+      border: 1px solid $primary;
+    }
+  }
+
+  .ant-picker-cell:hover:not(.ant-picker-cell-in-view),
+  .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) {
     background: $acent-d1;
-    border-color: $primary !important;
   }
 
   .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
   .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner {
-    background: $acent-d1;
+    background: transparent;
   }
 
   .ant-picker-calendar {
@@ -105,6 +124,7 @@
           @media (max-width: 1200px) {
             font-size: 16px;
             padding: 4px;
+            text-align: center;
           }
         }
       }

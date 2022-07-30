@@ -8,10 +8,10 @@ import Button from '@/components/Button';
 import { EIconColor } from '@/components/Icon';
 import Carousels from '@/components/Carousels';
 import ModalCheckMission from '@/containers/ModalCheckMission';
+import { Paths } from '@/pages/routers';
 
 import { dataRankingList } from './Ranking.data';
 import './Ranking.scss';
-import { Paths } from '@/pages/routers';
 
 const Ranking = () => {
   const deviceWidth = useSelector((state) => state.uiReducer.device.width);
@@ -20,6 +20,8 @@ const Ranking = () => {
   const [currentRank, setCurrentRank] = useState(4);
   const [refCarousel, setRefCarousel] = useState(null);
   const [visibleFollowChannel, setVisibleFollowChannel] = useState(false);
+
+  const dataCurrentRank = dataRankingList.find((item) => item.level === currentRank);
 
   const handleInitialCarousel = (ref) => {
     setRefCarousel(ref);
@@ -139,7 +141,7 @@ const Ranking = () => {
                     <span className="heading-03">Min</span>
                   </td>
                   <td>
-                    <span className="body-01">1000 ONEB</span>
+                    <span className="body-01">{dataCurrentRank.min}</span>
                   </td>
                 </tr>
 
@@ -148,7 +150,7 @@ const Ranking = () => {
                     <span className="heading-03">Winner Selection</span>
                   </td>
                   <td>
-                    <span className="body-01">Lottery</span>
+                    <span className="body-01">{dataCurrentRank.winnerSelection}</span>
                   </td>
                 </tr>
                 <tr>
@@ -156,7 +158,7 @@ const Ranking = () => {
                     <span className="heading-03">Max Individual Allocation</span>
                   </td>
                   <td>
-                    <span className="body-01">$600</span>
+                    <span className="body-01">{dataCurrentRank.maxIndividualAllocation}</span>
                   </td>
                 </tr>
                 <tr>
@@ -164,21 +166,15 @@ const Ranking = () => {
                     <span className="heading-03">Withdrawal Delay</span>
                   </td>
                   <td>
-                    <span className="body-01">12 Days</span>
+                    <span className="body-01">{dataCurrentRank.withdrawalDelay}</span>
                   </td>
                 </tr>
-                <tr className="break-mb">
+                <tr className="break-mb top">
                   <td>
                     <span className="heading-03">Benefit</span>
                   </td>
                   <td>
-                    <span className="body-01">
-                      KOL in an early stage with a special deal (revenue split) to provide the land and build their
-                      iconic worlds, organize virtual events to give them visualized topics to interact with their
-                      followers to join XANA to visit their lands. They also incentivize them according to the number of
-                      social engagements. Micro-influencers also have the opportunity to be rewarded by their social
-                      mining activities for Metaverse with driving traffic to Metaverse.
-                    </span>
+                    <span className="body-01">{dataCurrentRank.benefit}</span>
                   </td>
                 </tr>
                 <tr className="break-mb">
@@ -187,7 +183,7 @@ const Ranking = () => {
                   </td>
                   <td>
                     <div className="flex items-center justify-between">
-                      <span className="body-01">Required quests that you need to complete before you can rank up</span>
+                      <span className="body-01">{dataCurrentRank.mission}</span>
                       <Button
                         title="Check"
                         size={isMobile ? 'small' : 'middle'}

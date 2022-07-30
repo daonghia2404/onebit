@@ -10,6 +10,7 @@ const ReferralList = () => {
       key: 'referee',
       dataIndex: 'referee',
       title: 'Referee',
+      fixed: true,
     },
     {
       key: 'refereeId',
@@ -20,6 +21,7 @@ const ReferralList = () => {
       key: 'time',
       dataIndex: 'time',
       title: 'Time',
+      className: 'nowrap',
     },
     {
       key: 'rewardAmount',

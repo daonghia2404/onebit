@@ -50,6 +50,11 @@
       background: $acent-d1;
       position: relative;
 
+      @media (max-width: 1200px) {
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
       &::before {
         position: absolute;
         background: $acent-d1;

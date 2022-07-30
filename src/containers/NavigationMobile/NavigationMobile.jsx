@@ -7,7 +7,7 @@ import { Paths } from '@/pages/routers';
 
 import './NavigationMobile.scss';
 
-const NavigationMobile = ({ visibleMenu, onOpenMenu }) => {
+const NavigationMobile = ({ visibleMenu, onOpenMenu, onCloseMenu }) => {
   const { pathname } = useLocation();
 
   const dataNavigationMobileMenu = [
@@ -35,6 +35,7 @@ const NavigationMobile = ({ visibleMenu, onOpenMenu }) => {
 
   const handleNaviage = (link) => {
     navigate(link);
+    onCloseMenu?.();
   };
 
   return (
@@ -44,7 +45,7 @@ const NavigationMobile = ({ visibleMenu, onOpenMenu }) => {
           <div
             key={index}
             className={classNames('NavigationMobile-item flex flex-col items-center justify-center', {
-              active: pathname.includes(item.link) || (item.icon === EIconName.Menu && visibleMenu),
+              active: pathname.includes(item.link) || (item.title === 'Menu' && visibleMenu),
             })}
             onClick={item.link ? () => handleNaviage(item.link) : item.onClick}
           >

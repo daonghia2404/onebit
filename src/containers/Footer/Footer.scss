@@ -67,10 +67,22 @@
 
   &-socials {
     margin: 32px 0 40px;
+    max-width: 360px;
 
     @media (max-width: 1200px) {
       margin: 32px 0 28px;
+    }
 
+    &-item {
+      &:hover {
+        .fill {
+          fill: $acent-blue;
+        }
+      }
+
+      .fill {
+        transition: $common-transition;
+      }
     }
   }
 

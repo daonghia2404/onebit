@@ -14,6 +14,7 @@ const initialState = {
     isMobile: window.innerWidth <= BREAKPOINT,
     width: window.innerWidth,
   },
+  visibleMenu: false,
 };
 
 const reducer = createReducer(initialState, (handleAction) => [
@@ -24,6 +25,10 @@ const reducer = createReducer(initialState, (handleAction) => [
       isMobile: payload.deviceWidth <= BREAKPOINT,
       width: payload.deviceWidth,
     },
+  })),
+  handleAction(uiActions.setVisibleMenu, (state, { payload }) => ({
+    ...state,
+    visibleMenu: payload.visible,
   })),
 ]);
 

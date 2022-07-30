@@ -24,12 +24,20 @@ const Benefit = () => {
           {isMobile ? (
             <Carousels
               className="Benefit-body"
-              slidesToShow={1}
+              slidesToShow={3}
               centerMode
               infinite
               autoplay
               dots={false}
               arrows={false}
+              responsive={[
+                {
+                  breakpoint: 991,
+                  settings: {
+                    slidesToShow: 1,
+                  },
+                },
+              ]}
             >
               {dataBenefit.map((item, index) => (
                 <div key={index} className="Benefit-body-col">

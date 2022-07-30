@@ -4,6 +4,11 @@
   .ant-table {
     background: $acent-d2;
 
+    .ant-table-cell-fix-left,
+    .ant-table-cell-fix-right {
+      background: $acent-d2 !important;
+    }
+
     th.ant-table-cell {
       color: $primary-lc-6;
       background: transparent;

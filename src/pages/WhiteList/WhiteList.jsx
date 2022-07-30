@@ -20,7 +20,7 @@ const WhiteList = () => {
   return (
     <div className="WhiteList">
       <Header title="WhiteList" onBack={handleNavigateBack} />
-      <WhiteListChannel isDetail isClaim />
+      <WhiteListChannel isJoin />
       <WhiteListOverview />
       <WhiteListResponses />
     </div>

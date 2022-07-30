@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import { navigate, useLocation } from '@reach/router';
 
@@ -14,6 +14,10 @@ const NavigationMobileList = ({ visibleMenu, onClose }) => {
     navigate(link);
     onClose?.();
   };
+
+  useEffect(() => {
+    onClose?.();
+  }, [pathname]);
 
   return (
     <div className={classNames('NavigationMobileList', { active: visibleMenu })}>

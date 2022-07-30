@@ -5,7 +5,7 @@
   padding: 80px 0;
 
   @media (max-width: 1200px) {
-    padding: 100px 0 40px;
+    padding: 128px 0 40px;
   }
 
   &-bg {
@@ -76,6 +76,7 @@
       }
 
       &-title {
+        display: block;
         margin-bottom: 16px;
         color: $primary-lc-8;
       }
@@ -83,6 +84,18 @@
       &-socials {
         max-width: 360px;
         margin-bottom: 16px;
+
+        &-item {
+          &:hover {
+            .fill {
+              fill: $acent-blue;
+            }
+          }
+
+          .fill {
+            transition: $common-transition;
+          }
+        }
       }
 
       &-description {
@@ -243,7 +256,8 @@
     @media (max-width: 1200px) {
       margin-bottom: 32px;
       height: auto;
-      align-items: flex-start;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
     }
   }
 

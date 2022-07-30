@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Col, Form, Row } from 'antd';
 import { useSelector } from 'react-redux';
+import { Link } from '@reach/router';
 
 import Select from '@/components/Select';
 import BgWhiteListChannel from '@/assets/images/bg-lauchpad.png';
@@ -16,8 +17,10 @@ import Progress from '@/components/Progress';
 import { dataOptionsContractAddress } from './WhiteListChannel.data';
 import './WhiteListChannel.scss';
 
-const WhiteListChannel = ({ isBuy, isClaim, isDetail, isJoin }) => {
+const WhiteListChannel = () => {
   const [form] = Form.useForm();
+  const [isJoined, setIsJoined] = useState(false);
+  const [isClaim, setIsClaim] = useState(false);
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
 
   const renderFormContract = () => {
@@ -42,7 +45,7 @@ const WhiteListChannel = ({ isBuy, isClaim, isDetail, isJoin }) => {
             </div>
           </div>
         </div>
-        {isDetail && (
+        {isJoined && (
           <div className="WhiteListChannel-progress">
             <div className="WhiteListChannel-progress-subtitle heading-02">Token Claim start with your rank in</div>
             <div className="WhiteListChannel-progress-hour heading-01">1h 24m 56s</div>
@@ -82,7 +85,9 @@ const WhiteListChannel = ({ isBuy, isClaim, isDetail, isJoin }) => {
                     ))}
                   </div>
 
-                  <div className="WhiteListChannel-channel-info-title big-title-01">XANA</div>
+                  <Link to={Paths.WhiteListDetail} className="WhiteListChannel-channel-info-title big-title-01">
+                    XANA
+                  </Link>
                   <div className="WhiteListChannel-channel-info-socials flex items-center justify-between">
                     {dataSocials.map((item, index) => (
                       <a
@@ -130,13 +135,19 @@ const WhiteListChannel = ({ isBuy, isClaim, isDetail, isJoin }) => {
                           <span className="heading-03">Whitelist</span>
                         </td>
                         <td>
-                          <span className="heading-03" style={{ color: EIconColor.DANGER_2 }}>
-                            You aren't whitelist
-                          </span>
+                          {isJoined ? (
+                            <span className="heading-03" style={{ color: EIconColor.SUCCESS_2 }}>
+                              You are whitelist
+                            </span>
+                          ) : (
+                            <span className="heading-03" style={{ color: EIconColor.DANGER_2 }}>
+                              You aren't whitelist
+                            </span>
+                          )}
                         </td>
                       </tr>
                     </table>
-                    {isBuy && (
+                    {isJoined && !isClaim && (
                       <div className="WhiteListChannel-buy">
                         <Row gutter={16} align="bottom">
                           <Col span={24} lg={{ span: 18 }}>
@@ -145,7 +156,7 @@ const WhiteListChannel = ({ isBuy, isClaim, isDetail, isJoin }) => {
                             </Form.Item>
                           </Col>
                           <Col span={24} lg={{ span: 6 }}>
-                            <Button title="Buy" />
+                            <Button title="Buy" onClick={() => setIsClaim(true)} />
                           </Col>
                         </Row>
                       </div>
@@ -160,11 +171,11 @@ const WhiteListChannel = ({ isBuy, isClaim, isDetail, isJoin }) => {
                         </div>
                       </div>
                     )}
-                    {isJoin && (
+                    {!isJoined && (
                       <Button
                         title="Join Whitelist"
-                        link={Paths.WhiteListDetail}
                         size={isMobile ? 'small' : 'middle'}
+                        onClick={() => setIsJoined(true)}
                       />
                     )}
                   </div>

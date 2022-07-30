@@ -111,6 +111,16 @@
           height: 24px;
           margin: 0 16px;
 
+          &:hover {
+            .fill {
+              fill: $acent-blue;
+            }
+          }
+
+          .fill {
+            transition: $common-transition;
+          }
+
           .Icon {
             width: 100%;
             height: 100%;

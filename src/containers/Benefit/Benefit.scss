@@ -43,6 +43,12 @@
         height: auto;
         align-items: center;
         justify-content: center;
+
+        & > div {
+          @media (max-width: 1200px) {
+            width: 100%;
+          }
+        }
       }
     }
 

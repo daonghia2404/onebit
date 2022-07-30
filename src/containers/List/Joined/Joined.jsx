@@ -11,6 +11,7 @@ const Joined = () => {
       key: 'projectName',
       dataIndex: 'projectName',
       title: 'Project Name',
+      fixed: true,
     },
     {
       key: 'nextClaim',

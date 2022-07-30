@@ -1,15 +1,20 @@
 import React from 'react';
 
 import IntroductionCircle from './IntroductionCircle';
+import IntroductionPlan from '@/containers/Introduction/IntroductionPlan';
 import './Introduction.scss';
 
 const Introduction = () => {
   return (
     <div className="Introduction">
       <div className="container">
-        <div className="Introduction-wrapper flex items-center justify-between">
+        <div className="Introduction-wrapper flex items-start justify-between">
           <div className="Introduction-wrapper-item">
-            <div className="Introduction-title big-title-01">Invest to create real values</div>
+            <div className="Introduction-title big-title-01">
+              Invest to create
+              <br />
+              <span>real values</span>
+            </div>
 
             <div className="Introduction-description description-02">
               Onebit Ventures hoạt động với tư cách quỹ chuyên đầu tư, tư vấn, ươm tạo và hỗ trợ sự phát triển của các
@@ -24,7 +29,8 @@ const Introduction = () => {
             </ul>
           </div>
           <div className="Introduction-wrapper-item">
-            <IntroductionCircle />
+            <IntroductionPlan />
+            {/* <IntroductionCircle /> */}
           </div>
         </div>
       </div>

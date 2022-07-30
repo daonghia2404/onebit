@@ -13,6 +13,13 @@
     padding: 32px;
     border-radius: 4px;
     background: $acent-d2;
+    cursor: pointer;
+    transition: $common-transition;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
 
     @media (max-width: 1200px) {
       display: flex;

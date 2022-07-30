@@ -11,6 +11,7 @@ const Ended = () => {
       key: 'projectName',
       dataIndex: 'projectName',
       title: 'Project Name',
+      fixed: true,
     },
     {
       key: 'chain',

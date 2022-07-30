@@ -21,7 +21,22 @@ const Blogs = () => {
           </div>
           <div className="Blogs-wrapper-item">
             {isMobile ? (
-              <Carousels className="Blogs-list" slidesToShow={1.1} dots={false} arrows={false}>
+              <Carousels
+                className="Blogs-list"
+                slidesToShow={2.1}
+                dots={false}
+                arrows={false}
+                responsive={[
+                  {
+                    breakpoint: 991,
+                    settings: {
+                      infinite: true,
+                      centerMode: true,
+                      slidesToShow: 1.1,
+                    },
+                  },
+                ]}
+              >
                 {[1, 2, 3, 4, 5, 6].map((item, index) => (
                   <div key={index} className="Blogs-list-col">
                     <div key={index} className="Blogs-list-item">

@@ -112,7 +112,7 @@
         height: 180px;
         @include centerScaleImage;
 
-        @media (max-width: 1200px) {
+        @media (max-width: 575px) {
           height: 130px;
         }
       }

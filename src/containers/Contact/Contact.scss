@@ -26,6 +26,19 @@
 
   &-socials {
     margin: 32px 0;
+    max-width: 320px;
+
+    &-item {
+      &:hover {
+        .fill {
+          fill: $acent-blue;
+        }
+      }
+
+      .fill {
+        transition: $common-transition;
+      }
+    }
   }
 
   &-contacts {
@@ -68,7 +81,6 @@
 
     @media (max-width: 1200px) {
       width: 100%;
-      max-width: 345px;
       margin: 0 auto;
     }
   }

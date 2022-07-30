@@ -1,0 +1,146 @@
+@import '../../../assets/styles/global';
+
+.IntroductionPlan {
+  position: relative;
+
+  body {
+    background-color: $acent-dark;
+  }
+
+  // .header {
+  //   width: 100%;
+  //   min-height: 100vh;
+  //   position: relative;
+  // }
+
+  // canvas {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: -1;
+  // }
+
+  // .v-center {
+  //   position: absolute;
+  //   width: 100%;
+  //   left: 0%;
+  //   top: 50%;
+  //   transform: translate(-50%);
+  // }
+
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.25;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  /**
+   * Paper Plane
+   */
+  /*Paper Plane: Container*/
+  .plane-container {
+    width: 100%;
+    height: 300px;
+    margin: 0px auto;
+    z-index: 3;
+  }
+
+  /*Paper Plane: Image*/
+  .plane {
+    width: 100%;
+
+    &-wrapper {
+      position: absolute;
+      width: 485px;
+      top: 20px;
+      right: 20px;
+
+      @media (max-width: 1200px) {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 100%;
+        max-width: 485px;
+      }
+
+      @media (max-width: 375px) {
+        max-width: 320px;
+      }
+    }
+  }
+
+  /*Paper Plane: Animation*/
+  .plane-container {
+    -webkit-animation: paper-plane-scoping 2s alternate infinite;
+    -moz-animation: paper-plane-scoping 2s alternate infinite;
+    animation: paper-plane-scoping 2s alternate infinite;
+
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+
+  @keyframes paper-plane-scoping {
+    0% {
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px);
+    }
+
+    100% {
+      -webkit-transform: translateY(30px);
+      -moz-transform: translateY(30px);
+      transform: translateY(30px);
+    }
+  }
+
+  .plane {
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+
+    -webkit-animation: paper-plane-soaring 4s forwards infinite;
+    -moz-animation: paper-plane-soaring 4s forwards infinite;
+    animation: paper-plane-soaring 4s forwards infinite;
+  }
+
+  @keyframes paper-plane-soaring {
+    0% {
+      -webkit-transform: scale(1) rotate(-10deg);
+      -moz-transform: scale(1) rotate(-10deg);
+      transform: scale(1) rotate(-10deg);
+    }
+
+    30% {
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+    }
+
+    50% {
+      -webkit-transform: scale(0.97) rotate(-5deg);
+      -moz-transform: scale(0.97) rotate(-5deg);
+      transform: scale(0.97) rotate(-5deg);
+    }
+
+    70% {
+      -webkit-transform: rotate(-5deg);
+      -moz-transform: rotate(-5deg);
+      transform: rotate(-5deg);
+    }
+
+    100% {
+      -webkit-transform: scale(1) rotate(-10deg);
+      -moz-transform: scale(1) rotate(-10deg);
+      transform: scale(1) rotate(-10deg);
+    }
+  }
+
+}

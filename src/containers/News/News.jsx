@@ -53,11 +53,19 @@ const News = () => {
               onInit={handleInitialNewsCarousel}
               responsive={[
                 {
-                  breakpoint: BREAKPOINT,
+                  breakpoint: 991,
                   settings: {
                     infinite: true,
                     centerMode: true,
                     slidesToShow: 1,
+                  },
+                },
+                {
+                  breakpoint: BREAKPOINT,
+                  settings: {
+                    infinite: true,
+                    centerMode: true,
+                    slidesToShow: 3,
                   },
                 },
               ]}

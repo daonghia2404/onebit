@@ -8,6 +8,10 @@
     padding: 40px 0;
   }
 
+  &-header {
+    text-align: center;
+  }
+
   &-subtitle {
     color: $acent-blue;
     text-transform: uppercase;
@@ -69,7 +73,7 @@
         height: 180px;
         @include centerScaleImage;
 
-        @media (max-width: 1200px) {
+        @media (max-width: 575px) {
           height: 130px;
         }
       }
