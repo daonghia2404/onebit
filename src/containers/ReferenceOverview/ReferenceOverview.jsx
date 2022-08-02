@@ -23,13 +23,13 @@ const ReferenceOverview = () => {
   ];
 
   return (
-    <div className="ReferenceOverview">
+    <section className="ReferenceOverview">
       <div className="container">
         <div className="ReferenceOverview-wrapper">
           <Tab defaultActiveKey={EKeyTabReferenceOverview.OVERVIEW} data={dataReferenceOverviewTabs} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

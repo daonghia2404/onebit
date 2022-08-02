@@ -14,14 +14,14 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="Portfolio">
+    <section className="Portfolio">
       <div className="container">
         <div className="Portfolio-wrapper">
           <div className="Portfolio-header">
-            <div className="Portfolio-subtitle subheading">Portfolio</div>
-            <div className="Portfolio-title big-title-02">
+            <h3 className="Portfolio-subtitle subheading">Portfolio</h3>
+            <h2 className="Portfolio-title big-title-02">
               All projects launched. They all aim at long-term development and ensure benefits.
-            </div>
+            </h2>
           </div>
 
           <div className="Portfolio-carousel">
@@ -57,7 +57,7 @@ const Portfolio = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

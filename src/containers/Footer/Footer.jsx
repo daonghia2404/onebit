@@ -11,7 +11,7 @@ import './Footer.scss';
 
 const Footer = () => {
   return (
-    <div className="Footer">
+    <footer className="Footer">
       <div className="Footer-bg">
         <img src={BgFooter} alt="" />
       </div>
@@ -21,10 +21,10 @@ const Footer = () => {
             <Link to={Paths.Home} className="Footer-logo">
               <img src={Logo} alt="" />
             </Link>
-            <div className="Footer-text description-01">134 7th street, Go Vap District, Ho Chi Minh City, Vietnam</div>
+            <p className="Footer-text description-01">134 7th street, Go Vap District, Ho Chi Minh City, Vietnam</p>
           </div>
           <div className="Footer-wrapper-item">
-            <div className="Footer-text heading-03">Join Our Community</div>
+            <h4 className="Footer-text heading-03">Join Our Community</h4>
             <div className="Footer-socials flex items-center justify-between">
               {dataSocials.map((item, index) => (
                 <a key={index} href={item.link} className="Footer-socials-item" target="_blank">
@@ -32,11 +32,11 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <div className="Footer-copyright body-02">Copyright © 2022 Onebit Ventures. All Rights Reserved. </div>
+            <p className="Footer-copyright body-02">Copyright © 2022 Onebit Ventures. All Rights Reserved. </p>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

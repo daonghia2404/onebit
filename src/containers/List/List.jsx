@@ -16,12 +16,12 @@ const List = () => {
   ];
 
   return (
-    <div className="List">
+    <section className="List">
       <div className="container">
         <div className="List-wrapper">
           <div className="List-header">
-            <div className="List-subtitle subheading">List</div>
-            <div className="List-title big-title-02">All past IDOs/SHO offerings that were hosted on launchpad.</div>
+            <h3 className="List-subtitle subheading">List</h3>
+            <h2 className="List-title big-title-02">All past IDOs/SHO offerings that were hosted on launchpad.</h2>
           </div>
 
           <div className="List-body">
@@ -29,7 +29,7 @@ const List = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

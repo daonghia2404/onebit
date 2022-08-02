@@ -78,7 +78,10 @@
       &-title {
         display: block;
         margin-bottom: 16px;
-        color: $primary-lc-8;
+
+        a {
+          color: $primary-lc-8;
+        }
       }
 
       &-socials {

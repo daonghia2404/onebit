@@ -58,8 +58,7 @@ const Guest = ({ children }) => {
       )}
 
       <div className="Guest-main">
-        <div className="Guest-header"></div>
-        <div className="Guest-body">{children}</div>
+        <main className="Guest-body">{children}</main>
       </div>
     </div>
   );

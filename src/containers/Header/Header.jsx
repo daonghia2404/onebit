@@ -39,10 +39,10 @@ const Header = ({ title, onBack }) => {
   ];
 
   return (
-    <div className="Header">
+    <header className="Header">
       <div className="Header-wrapper flex items-center justify-between">
         <div className="Header-wrapper-item">
-          <div className="Header-title heading-01 flex items-center">
+          <h2 className="Header-title heading-01 flex items-center">
             {onBack && (
               <div className="Header-back" onClick={onBack}>
                 <Icon name={EIconName.ArrowLeft} color={EIconColor.WHITE} />
@@ -50,7 +50,7 @@ const Header = ({ title, onBack }) => {
             )}
 
             {title}
-          </div>
+          </h2>
           <Link to={Paths.Home} className="Header-logo">
             <img src={Logo} alt="" />
           </Link>
@@ -69,7 +69,7 @@ const Header = ({ title, onBack }) => {
           )}
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

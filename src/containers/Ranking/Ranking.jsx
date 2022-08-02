@@ -45,7 +45,7 @@ const Ranking = () => {
   }, [refCarousel]);
 
   return (
-    <div className="Ranking">
+    <section className="Ranking">
       <div className="container">
         <div className="Ranking-wrapper">
           <div className="Ranking-my-rank">
@@ -104,6 +104,8 @@ const Ranking = () => {
                 slidesToShow={1}
                 dots={false}
                 arrows={false}
+                infinite={false}
+                variableWidth
                 className="Ranking-list-image"
                 afterChange={(index) => handleChangeCurrentRank(index + 1)}
               >
@@ -203,7 +205,7 @@ const Ranking = () => {
         onClose={handleCloseFollowChannelModal}
         onSubmit={handleCloseFollowChannelModal}
       />
-    </div>
+    </section>
   );
 };
 

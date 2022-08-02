@@ -7,11 +7,11 @@ import './WhiteListResponses.scss';
 
 const WhiteListResponses = () => {
   return (
-    <div className="WhiteListResponses">
+    <section className="WhiteListResponses">
       <div className="container">
         <div className="WhiteListResponses-wrapper">
           <div className="WhiteListResponses-header">
-            <div className="WhiteListResponses-title big-title-02">Responses</div>
+            <h2 className="WhiteListResponses-title big-title-02">Responses</h2>
           </div>
 
           <div className="WhiteListResponses-body">
@@ -19,7 +19,7 @@ const WhiteListResponses = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

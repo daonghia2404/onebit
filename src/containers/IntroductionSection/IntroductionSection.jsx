@@ -5,7 +5,7 @@ import './IntroductionSection.scss';
 
 const IntroductionSection = ({ image, title, description, link, reverse }) => {
   return (
-    <div className="IntroductionSection">
+    <section className="IntroductionSection">
       <div className="container">
         <div className={classNames('IntroductionSection-wrapper flex items-center justify-between', { reverse })}>
           <div className="IntroductionSection-wrapper-item">
@@ -14,9 +14,9 @@ const IntroductionSection = ({ image, title, description, link, reverse }) => {
             </div>
           </div>
           <div className="IntroductionSection-wrapper-item">
-            <div className="IntroductionSection-title big-title-01">{title}</div>
+            <h1 className="IntroductionSection-title big-title-01">{title}</h1>
 
-            <div className="IntroductionSection-description description-02">{description}</div>
+            <p className="IntroductionSection-description description-02">{description}</p>
             {link && (
               <a href={link.link} className="IntroductionSection-link description-02">
                 {link.title}
@@ -25,7 +25,7 @@ const IntroductionSection = ({ image, title, description, link, reverse }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

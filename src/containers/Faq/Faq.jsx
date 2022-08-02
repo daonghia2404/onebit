@@ -14,12 +14,12 @@ const Faq = () => {
   };
 
   return (
-    <div className="Faq">
+    <section className="Faq">
       <div className="container">
         <div className="Faq-wrapper">
           <div className="Faq-header">
-            <div className="Faq-subtitle subheading">Faq</div>
-            <div className="Faq-title big-title-02">Frequently asked questions, maybe the same as yours</div>
+            <h3 className="Faq-subtitle subheading">Faq</h3>
+            <h2 className="Faq-title big-title-02">Frequently asked questions, maybe the same as yours</h2>
           </div>
 
           <div className="Faq-body flex flex-wrap">
@@ -46,7 +46,7 @@ const Faq = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -39,7 +39,7 @@ const News = () => {
   };
 
   return (
-    <div className="News">
+    <section className="News">
       <div className="container">
         <div className="News-wrapper flex justify-between flex-wrap">
           <div className="News-wrapper-item">
@@ -73,12 +73,11 @@ const News = () => {
               {[1, 2, 3, 4, 5, 6].map((item, index) => (
                 <div key={index} className="News-list-item">
                   <div className="News-list-item-image"></div>
-                  <Link to={Paths.Home} className="News-list-item-title heading-03">
-                    How to compress image size without losing quality
-                  </Link>
-                  <div className="News-list-item-description headline">
-                    Small images can speed up website load times
-                  </div>
+                  <h4 className="News-list-item-title heading-03">
+                    <Link to={Paths.Home}>How to compress image size without losing quality</Link>
+                  </h4>
+
+                  <p className="News-list-item-description headline">Small images can speed up website load times</p>
                 </div>
               ))}
             </Carousels>
@@ -86,13 +85,13 @@ const News = () => {
             {isMobile && renderNewsActions()}
           </div>
           <div className="News-wrapper-item">
-            <div className="News-subtitle subheading">News</div>
-            <div className="News-title big-title-02">Hot news update today</div>
+            <h3 className="News-subtitle subheading">News</h3>
+            <h2 className="News-title big-title-02">Hot news update today</h2>
             {!isMobile && renderNewsActions()}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

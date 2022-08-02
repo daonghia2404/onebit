@@ -15,13 +15,13 @@ const TokenOwner = () => {
   ];
 
   return (
-    <div className="TokenOwner">
+    <section className="TokenOwner">
       <div className="container">
         <div className="TokenOwner-wrapper">
           <Tab defaultActiveKey={EKeyTabTokenOwner.TOKENS_OWNED} data={dataTabsTokenOwner} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

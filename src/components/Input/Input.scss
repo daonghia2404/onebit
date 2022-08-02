@@ -18,6 +18,11 @@
 
   .ant-input-suffix {
     margin-left: 8px;
+
+    .Icon {
+      width: 16px;
+      height: 16px;
+    }
   }
 
   .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {

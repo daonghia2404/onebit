@@ -50,13 +50,13 @@ const VerifyStep = () => {
   ];
 
   return (
-    <div className="VerifyStep">
+    <section className="VerifyStep">
       <div className="container">
         <div className="VerifyStep-wrapper">
           <Step currentStep={currentStep} data={dataVerifyStep} onChange={setCurrentSTep} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

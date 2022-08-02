@@ -67,7 +67,7 @@ const WhiteListChannel = () => {
   }, [form]);
 
   return (
-    <div className="WhiteListChannel">
+    <section className="WhiteListChannel">
       <div className="container">
         <Form form={form} layout="vertical" className="WhiteListChannel-wrapper">
           <div className="WhiteListChannel-channel">
@@ -85,9 +85,9 @@ const WhiteListChannel = () => {
                     ))}
                   </div>
 
-                  <Link to={Paths.WhiteListDetail} className="WhiteListChannel-channel-info-title big-title-01">
-                    XANA
-                  </Link>
+                  <h2 className="WhiteListChannel-channel-info-title big-title-01">
+                    <Link to={Paths.WhiteListDetail}>XANA</Link>
+                  </h2>
                   <div className="WhiteListChannel-channel-info-socials flex items-center justify-between">
                     {dataSocials.map((item, index) => (
                       <a
@@ -100,16 +100,16 @@ const WhiteListChannel = () => {
                       </a>
                     ))}
                   </div>
-                  <div className="WhiteListChannel-channel-info-description description-02">
+                  <p className="WhiteListChannel-channel-info-description description-02">
                     Several creative people gather in the same place - that's Collosal. We collaborate to produce the
                     best results, loved by clients and comfortable for users. Here we maintain togetherness even though
                     with different backgrounds, all the people here are already experts in their respective fields.
-                  </div>
+                  </p>
 
                   {isMobile && renderFormContract()}
 
                   <div className="WhiteListChannel-channel-info-requirement">
-                    <div className="WhiteListChannel-channel-info-requirement-title heading-02">REQUIREMENTS</div>
+                    <h4 className="WhiteListChannel-channel-info-requirement-title heading-02">REQUIREMENTS</h4>
                     <table>
                       <tr>
                         <td>
@@ -186,7 +186,7 @@ const WhiteListChannel = () => {
           </div>
         </Form>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -6,20 +6,20 @@ import './Introduction.scss';
 
 const Introduction = () => {
   return (
-    <div className="Introduction">
+    <section className="Introduction">
       <div className="container">
         <div className="Introduction-wrapper flex items-start justify-between">
           <div className="Introduction-wrapper-item">
-            <div className="Introduction-title big-title-01">
+            <h1 className="Introduction-title big-title-01">
               Invest to create
               <br />
               <span>real values</span>
-            </div>
+            </h1>
 
-            <div className="Introduction-description description-02">
+            <p className="Introduction-description description-02">
               Onebit Ventures hoạt động với tư cách quỹ chuyên đầu tư, tư vấn, ươm tạo và hỗ trợ sự phát triển của các
               công ty và dự án mới thành lập.
-            </div>
+            </p>
 
             <ul className="Introduction-list">
               <li className="Introduction-list-item description-01">ONEBIT Startup Launchpad</li>
@@ -34,7 +34,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

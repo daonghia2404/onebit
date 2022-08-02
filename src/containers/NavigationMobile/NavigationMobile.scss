@@ -1,6 +1,11 @@
 @import '../../assets/styles/global';
 
 .NavigationMobile {
+  @supports (-webkit-touch-callout: none) {
+    padding-bottom: 1.6rem;
+    background: $acent-d2;
+  }
+
   &-item {
     position: relative;
     cursor: pointer;

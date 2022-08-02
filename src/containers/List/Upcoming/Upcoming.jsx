@@ -21,6 +21,7 @@ const Upcoming = () => {
     return isEventDate ? (
       <div className="Calendar-image">
         <img src={ImagePortfolio1} alt="" />
+        <div className="Calendar-image-more small-caption">+3</div>
       </div>
     ) : (
       <></>

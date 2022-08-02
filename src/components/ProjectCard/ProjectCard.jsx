@@ -12,14 +12,14 @@ const ProjectCard = ({ className, title, tags = [], description, total, soldOut 
       <div className="ProjectCard-info-list flex flex-wrap">
         {total && (
           <div className="ProjectCard-info-list-item">
-            <span className="heading-03">Total Raise</span>
+            <h5 className="heading-03">Total Raise</h5>
             <span className="heading-01">{total}</span>
           </div>
         )}
 
         {soldOut && (
           <div className="ProjectCard-info-list-item">
-            <span className="heading-03">Sold Out</span>
+            <h5 className="heading-03">Sold Out</h5>
             <span className="heading-01">{soldOut}</span>
           </div>
         )}
@@ -32,7 +32,7 @@ const ProjectCard = ({ className, title, tags = [], description, total, soldOut 
       <div className="ProjectCard-wrapper flex">
         <div className="ProjectCard-image"></div>
         <div className="ProjectCard-info">
-          <div className="ProjectCard-info-title heading-03">{title}</div>
+          <h4 className="ProjectCard-info-title heading-03">{title}</h4>
           {isMobile && <div className="ProjectCard-info-description headline">{description}</div>}
           <div className="ProjectCard-info-tags flex flex-wrap">
             {tags?.map((tag, tagInx) => (

@@ -20,7 +20,7 @@ const NavigationMobileList = ({ visibleMenu, onClose }) => {
   }, [pathname]);
 
   return (
-    <div className={classNames('NavigationMobileList', { active: visibleMenu })}>
+    <nav className={classNames('NavigationMobileList', { active: visibleMenu })}>
       {dataNavigationMenu.map((item, index) => (
         <div
           key={index}
@@ -35,7 +35,7 @@ const NavigationMobileList = ({ visibleMenu, onClose }) => {
           <div className="NavigationMobileList-item-title subheading">{item.title}</div>
         </div>
       ))}
-    </div>
+    </nav>
   );
 };
 

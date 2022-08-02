@@ -10,12 +10,12 @@ const Stacking = () => {
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
 
   return (
-    <div className="Stacking">
+    <section className="Stacking">
       <div className="container">
         <div className="Stacking-wrapper">
           <div className="Stacking-header">
-            <div className="Stacking-subtitle subheading">Stacking</div>
-            <div className="Stacking-title big-title-02">Join IGO with 5 steps</div>
+            <h3 className="Stacking-subtitle subheading">Stacking</h3>
+            <h2 className="Stacking-title big-title-02">Join IGO with 5 steps</h2>
           </div>
 
           <div className="Stacking-body flex items-center justify-between flex-wrap">
@@ -25,7 +25,7 @@ const Stacking = () => {
                   <div className="Stacking-body-item-wrapper flex items-center justify-between">
                     <div className="Stacking-body-item-info">
                       <div className="Stacking-body-item-info-step heading-01">{`0${index + 1}`}</div>
-                      <div className="Stacking-body-item-info-title small-link-text">{item.title}</div>
+                      <p className="Stacking-body-item-info-title small-link-text">{item.title}</p>
                     </div>
                     <div className="Stacking-body-item-icon">
                       <img src={item.icon} alt="" />
@@ -41,7 +41,7 @@ const Stacking = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

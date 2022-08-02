@@ -16,7 +16,7 @@ const Navigation = () => {
   };
 
   return (
-    <div className="Navigation">
+    <nav className="Navigation">
       <div className="Navigation-logo">
         <img src={Favicon} alt="" />
       </div>
@@ -35,7 +35,7 @@ const Navigation = () => {
           </div>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 

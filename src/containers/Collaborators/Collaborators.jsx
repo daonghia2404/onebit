@@ -10,7 +10,7 @@ const Collaborators = () => {
   const dataCollaborators = [ImageCollaborator1, ImageCollaborator2, ImageCollaborator1, ImageCollaborator2];
 
   return (
-    <div className="Collaborators">
+    <section className="Collaborators">
       <div className="container">
         <div className="Collaborators-wrapper">
           <Carousels className="Collaborators-list" infinite slidesToShow={2} autoplay dots={false} arrows={false}>
@@ -22,7 +22,7 @@ const Collaborators = () => {
           </Carousels>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

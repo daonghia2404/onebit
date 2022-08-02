@@ -26,13 +26,13 @@ const WhiteListOverview = () => {
   ];
 
   return (
-    <div className="WhiteListOverview">
+    <section className="WhiteListOverview">
       <div className="container">
         <div className="WhiteListOverview-wrapper">
           <Tab defaultActiveKey={EKeyTabWhiteListOverview.OVERVIEW} data={dataTabsWhiteListOverview} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

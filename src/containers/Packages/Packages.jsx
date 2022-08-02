@@ -10,12 +10,12 @@ const Packages = () => {
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
 
   return (
-    <div className="Packages">
+    <section className="Packages">
       <div className="container">
         <div className="Packages-wrapper">
           <div className="Packages-header">
-            <div className="Packages-subtitle subheading">Packages</div>
-            <div className="Packages-title big-title-02">What do you need? Choose a service that can help you</div>
+            <h3 className="Packages-subtitle subheading">Packages</h3>
+            <h2 className="Packages-title big-title-02">What do you need? Choose a service that can help you</h2>
           </div>
 
           <div className="Packages-body flex items-center justify-between">
@@ -23,19 +23,19 @@ const Packages = () => {
               <div key={index} className="Packages-body-col">
                 <div className="Packages-body-item">
                   <div className="Packages-body-item-header flex justify-between">
-                    <div className="Packages-body-item-header-title subheading uppercase">{item.title}</div>
+                    <h4 className="Packages-body-item-header-title subheading uppercase">{item.title}</h4>
                     <div className="Packages-body-item-header-price subheading">
                       <span className="small-link-text">Starting from</span>
                       <span className="heading-02">{item.value}</span>
                     </div>
                   </div>
 
-                  <div className="Packages-body-item-list text-center">
-                    <div className="Packages-body-item-list-item description-02">10 design pages</div>
-                    <div className="Packages-body-item-list-item description-02">Well-documented</div>
-                    <div className="Packages-body-item-list-item description-02">4 revisions</div>
-                    <div className="Packages-body-item-list-item description-02">$100/additional page</div>
-                  </div>
+                  <ul className="Packages-body-item-list text-center">
+                    <li className="Packages-body-item-list-item description-02">10 design pages</li>
+                    <li className="Packages-body-item-list-item description-02">Well-documented</li>
+                    <li className="Packages-body-item-list-item description-02">4 revisions</li>
+                    <li className="Packages-body-item-list-item description-02">$100/additional page</li>
+                  </ul>
 
                   <div className="Packages-body-item-btn flex justify-center">
                     <Button title="More Detail" size={isMobile ? 'small' : 'middle'} />
@@ -46,7 +46,7 @@ const Packages = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -18,9 +18,9 @@ const Comment = ({ name, time, content, likesCount, isReply }) => {
 
   return (
     <div className="Comment">
-      <div className="Comment-name heading-03">{name}</div>
+      <h4 className="Comment-name heading-03">{name}</h4>
       <div className="Comment-time body-02">{time}</div>
-      <div className="Comment-content body-01">{content}</div>
+      <p className="Comment-content body-01">{content}</p>
       <div className="Comment-actions flex flex-wrap items-center">
         <div className="Comment-actions-item body-hightlight">Like</div>
         {isReply && (

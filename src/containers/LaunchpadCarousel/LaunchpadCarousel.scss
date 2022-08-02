@@ -86,9 +86,11 @@
 
       &-wrapper {
         flex: 1;
+        position: relative;
 
         @media (max-width: 1200px) {
           overflow: auto;
+          scroll-behavior: smooth;
         }
       }
     }
@@ -167,8 +169,28 @@
           left: 0;
         }
 
-        &:hover,
+        @media (min-width: 1201px) {
+
+          &:hover {
+
+            &::before {
+              transform: scaleX(1);
+            }
+
+            .LaunchpadCarousel-carousel-action-item {
+              &-title {
+                color: rgba($white, 0.9);
+              }
+
+              &-description {
+                color: rgba($white, 0.75);
+              }
+            }
+          }
+        }
+
         &.active {
+
           &::before {
             transform: scaleX(1);
           }
@@ -183,6 +205,7 @@
             }
           }
         }
+
 
         &-title {
           color: rgba($white, 0.4);

@@ -36,11 +36,11 @@ const StakeStep = () => {
   ];
 
   return (
-    <div className="StakeStep">
+    <section className="StakeStep">
       <div className="StakeStep-wrapper">
         <Step currentStep={currentStep} data={dataStakeStep} onChange={setCurrentSTep} />
       </div>
-    </div>
+    </section>
   );
 };
 

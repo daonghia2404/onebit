@@ -12,7 +12,7 @@ import './Partner.scss';
 
 const Partner = () => {
   return (
-    <div className="Partner">
+    <section className="Partner">
       <div className="container">
         <div className="Partner-wrapper">
           <Carousels
@@ -50,7 +50,7 @@ const Partner = () => {
           </Carousels>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

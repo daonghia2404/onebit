@@ -38,7 +38,10 @@
     }
 
     &-item {
+      min-width: 216px;
+
       @media (max-width: 1200px) {
+        min-width: auto;
         margin: 0 0 36px 0;
         width: 100%;
 
@@ -56,6 +59,8 @@
 
         .Icon {
           margin: auto;
+          width: 30px;
+          height: 30px;
         }
       }
 

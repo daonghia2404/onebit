@@ -14,13 +14,13 @@ const StakeTabs = () => {
   ];
 
   return (
-    <div className="StakeTabs">
+    <section className="StakeTabs">
       <div className="container">
         <div className="StakeTabs-wrapper">
           <Tab defaultActiveKey={EKeyStakeTabs.STAKE} data={dataStakeTabs} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

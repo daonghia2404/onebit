@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import ImagePlan from '@/assets/images/image-plane.svg';
+import ImageArrows from '@/assets/images/image-arrows.svg';
 
 import './IntroductionPlan.scss';
+import classNames from 'classnames';
 
 const IntroductionPlan = () => {
   const deviceWidth = useSelector((state) => state.uiReducer.device.width);
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
+  const [visibleArrow, setVisibleArrow] = useState(false);
 
   const settings = {
     width: isMobile ? window.innerWidth : 696,
@@ -128,12 +131,15 @@ const IntroductionPlan = () => {
 
   return (
     <div className="IntroductionPlan">
-      <div class="header">
-        <p class="center v-center plane-container">
+      <div className="header">
+        <p className="center v-center plane-container">
           <canvas id="c"></canvas>
 
-          <div className="plane-wrapper">
-            <img src={ImagePlan} className="plane" alt="" />
+          <div
+            className={classNames('plane-wrapper', { 'arrow': visibleArrow })}
+            onClick={() => setVisibleArrow(!visibleArrow)}
+          >
+            <img src={visibleArrow ? ImageArrows : ImagePlan} className="plane" alt="" />
           </div>
         </p>
       </div>

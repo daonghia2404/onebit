@@ -7,7 +7,7 @@ import './Benefits.scss';
 
 const Benefits = () => {
   return (
-    <div className="Benefits">
+    <section className="Benefits">
       <div className="container">
         <div className="Benefits-wrapper">
           <div className="Benefits-header">
@@ -30,7 +30,7 @@ const Benefits = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,13 +5,13 @@ import './Features.scss';
 
 const Features = () => {
   return (
-    <div className="Features">
+    <section className="Features">
       <div className="Features-bg"></div>
       <div className="container">
         <div className="Features-wrapper">
           <div className="Features-header">
-            <div className="Features-subtitle subheading">Features</div>
-            <div className="Features-title big-title-02">Why choose Onebit</div>
+            <h3 className="Features-subtitle subheading">Features</h3>
+            <h2 className="Features-title big-title-02">Why choose Onebit</h2>
           </div>
 
           <div className="Features-body flex flex-wrap">
@@ -21,15 +21,15 @@ const Features = () => {
                   <div className="Features-body-item-image">
                     <img src={item.image} alt="" />
                   </div>
-                  <div className="Features-body-item-title heading-02">{item.title}</div>
-                  <div className="Features-body-item-description description-02">{item.description}</div>
+                  <h4 className="Features-body-item-title heading-02">{item.title}</h4>
+                  <p className="Features-body-item-description description-02">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

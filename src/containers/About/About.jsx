@@ -8,14 +8,14 @@ import './About.scss';
 
 const About = () => {
   return (
-    <div className="About">
+    <section className="About">
       <div className="container">
         <div className="About-wrapper">
           <div className="About-header">
-            <div className="About-subtitle subheading">About</div>
-            <div className="About-title big-title-02">
+            <h3 className="About-subtitle subheading">About</h3>
+            <h2 className="About-title big-title-02">
               In 3 years we reached 8 countries, 193 medias and earning $100B USD
-            </div>
+            </h2>
           </div>
 
           <div className="About-body flex items-center justify-between">
@@ -26,14 +26,14 @@ const About = () => {
                 </div>
                 <div className="About-body-item-info">
                   <div className="About-body-item-info-value heading-01">{item.value}</div>
-                  <div className="About-body-item-info-title subheading">{item.title}</div>
+                  <h4 className="About-body-item-info-title subheading">{item.title}</h4>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

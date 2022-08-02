@@ -18,12 +18,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="Contact">
+    <section className="Contact">
       <div className="container">
         <div className="Contact-wrapper flex justify-between">
           <div className="Contact-wrapper-item">
-            <div className="Contact-subtitle subheading">CONTACT</div>
-            <div className="Contact-text heading-03">Join Our Community</div>
+            <h3 className="Contact-subtitle subheading">CONTACT</h3>
+            <h4 className="Contact-text heading-03">Join Our Community</h4>
             <div className="Contact-socials flex items-center justify-between">
               {dataSocials.map((item, index) => (
                 <a key={index} href={item.link} className="Contact-socials-item" target="_blank">
@@ -90,7 +90,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

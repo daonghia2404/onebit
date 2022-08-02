@@ -11,7 +11,7 @@ const OverviewWhiteList = ({}) => {
     <div className="OverviewWhiteList">
       <div className="OverviewWhiteList-wrapper flex flex-wrap">
         <div className="OverviewWhiteList-wrapper-item">
-          <div className="OverviewWhiteList-menu">
+          <aside className="OverviewWhiteList-menu">
             {dataOverviewWhiteListMenu.map((item) => (
               <div
                 key={item.value}
@@ -21,11 +21,11 @@ const OverviewWhiteList = ({}) => {
                 {item.label}
               </div>
             ))}
-          </div>
+          </aside>
         </div>
         <div className="OverviewWhiteList-wrapper-item">
           <div className="OverviewWhiteList-content style-content">
-            <h3 className="heading-03">How is the payment system?</h3>
+            <h4 className="heading-03">How is the payment system?</h4>
             <p className="body-01">IP Driven</p>
             <p className="body-01">
               The platform establishes branding and global positioning by signing up contracts with world-renowned anime

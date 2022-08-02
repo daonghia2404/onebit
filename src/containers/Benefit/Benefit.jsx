@@ -11,33 +11,25 @@ const Benefit = () => {
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
 
   return (
-    <div className="Benefit">
+    <section className="Benefit">
       <div className="container">
         <div className="Benefit-wrapper">
           <div className="Benefit-header">
-            <div className="Benefit-subtitle subheading">Benefit</div>
-            <div className="Benefit-title big-title-02">
+            <h3 className="Benefit-subtitle subheading">Benefit</h3>
+            <h2 className="Benefit-title big-title-02">
               Projects in ONEBIT Onebit Labs will receive the following benefits
-            </div>
+            </h2>
           </div>
 
           {isMobile ? (
             <Carousels
               className="Benefit-body"
-              slidesToShow={3}
+              slidesToShow={1}
               centerMode
-              infinite
               autoplay
               dots={false}
               arrows={false}
-              responsive={[
-                {
-                  breakpoint: 991,
-                  settings: {
-                    slidesToShow: 1,
-                  },
-                },
-              ]}
+              infinite={false}
             >
               {dataBenefit.map((item, index) => (
                 <div key={index} className="Benefit-body-col">
@@ -46,7 +38,7 @@ const Benefit = () => {
                       <Icon name={item.icon} color={EIconColor.WHITE} />
                     </div>
                     <div className="Benefit-body-item-info">
-                      <div className="Benefit-body-item-info-title description-02">{item.title}</div>
+                      <p className="Benefit-body-item-info-title description-02">{item.title}</p>
                     </div>
                   </div>
                 </div>
@@ -70,7 +62,7 @@ const Benefit = () => {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

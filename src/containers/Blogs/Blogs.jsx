@@ -12,12 +12,12 @@ const Blogs = () => {
   const isMobile = useSelector((state) => state.uiReducer.device.isMobile);
 
   return (
-    <div className="Blogs">
+    <section className="Blogs">
       <div className="container">
         <div className="Blogs-wrapper">
           <div className="Blogs-header">
-            <div className="Blogs-subtitle subheading">Blogs</div>
-            <div className="Blogs-title big-title-02">Get precise knowledge wherever you are</div>
+            <h3 className="Blogs-subtitle subheading">Blogs</h3>
+            <h2 className="Blogs-title big-title-02">Get precise knowledge wherever you are</h2>
           </div>
           <div className="Blogs-wrapper-item">
             {isMobile ? (
@@ -41,12 +41,13 @@ const Blogs = () => {
                   <div key={index} className="Blogs-list-col">
                     <div key={index} className="Blogs-list-item">
                       <div className="Blogs-list-item-image"></div>
-                      <Link to={Paths.Home} className="Blogs-list-item-title heading-03">
-                        How to compress image size without losing quality
-                      </Link>
-                      <div className="Blogs-list-item-description headline">
+                      <h4 className="Blogs-list-item-title heading-03">
+                        <Link to={Paths.Home}>How to compress image size without losing quality</Link>
+                      </h4>
+
+                      <p className="Blogs-list-item-description headline">
                         Small images can speed up website load times
-                      </div>
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -57,12 +58,13 @@ const Blogs = () => {
                   <div className="Blogs-list-col">
                     <div key={index} className="Blogs-list-item">
                       <div className="Blogs-list-item-image"></div>
-                      <Link to={Paths.Home} className="Blogs-list-item-title heading-03">
-                        How to compress image size without losing quality
-                      </Link>
-                      <div className="Blogs-list-item-description headline">
+                      <h4 className="Blogs-list-item-title heading-03">
+                        <Link to={Paths.Home}>How to compress image size without losing quality</Link>
+                      </h4>
+
+                      <p className="Blogs-list-item-description headline">
                         Small images can speed up website load times
-                      </div>
+                      </p>
                     </div>
                   </div>
                 ))}
@@ -76,7 +78,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

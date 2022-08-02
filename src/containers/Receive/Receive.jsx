@@ -20,7 +20,7 @@ const Receive = () => {
   }, [form]);
 
   return (
-    <div className="Receive">
+    <section className="Receive">
       <div className="container">
         <div className="Receive-wrapper">
           <Row gutter={32}>
@@ -73,7 +73,7 @@ const Receive = () => {
           </Row>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

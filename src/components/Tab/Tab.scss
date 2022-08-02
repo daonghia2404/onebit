@@ -2,8 +2,9 @@
 
 .Tab {
   &-tabs {
-    margin-bottom: 64px;
     overflow: auto;
+    padding: 64px 16px;
+    margin: -64px -16px 0;
 
     &-item {
       position: relative;

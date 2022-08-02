@@ -39,7 +39,7 @@ const NavigationMobile = ({ visibleMenu, onOpenMenu, onCloseMenu }) => {
   };
 
   return (
-    <div className="NavigationMobile">
+    <nav className="NavigationMobile">
       <div className="NavigationMobile-wrapper flex">
         {dataNavigationMobileMenu.map((item, index) => (
           <div
@@ -56,7 +56,7 @@ const NavigationMobile = ({ visibleMenu, onOpenMenu, onCloseMenu }) => {
           </div>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 

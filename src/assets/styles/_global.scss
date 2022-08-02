@@ -3,6 +3,7 @@
 @import '~slick-carousel/slick/slick-theme.css';
 
 @import './normalize';
+@import './reset';
 // @import './bootstrap-grid';
 @import './fonts';
 @import './colors';
@@ -339,5 +340,11 @@ ul {
   img {
     max-width: 100%;
     margin: 0 16px auto;
+  }
+}
+
+a {
+  &:hover {
+    color: $acent-blue !important;
   }
 }

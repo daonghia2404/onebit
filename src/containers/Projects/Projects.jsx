@@ -10,14 +10,12 @@ import ProjectCard from '@/components/ProjectCard';
 
 const Projects = () => {
   return (
-    <div className="Projects">
+    <section className="Projects">
       <div className="container">
         <div className="Projects-wrapper">
           <div className="Projects-header">
-            <div className="Projects-subtitle subheading">Projects</div>
-            <div className="Projects-title big-title-02">
-              All past IDOs/SHO offerings that were hosted on launchpad.
-            </div>
+            <h3 className="Projects-subtitle subheading">Projects</h3>
+            <h2 className="Projects-title big-title-02">All past IDOs/SHO offerings that were hosted on launchpad.</h2>
           </div>
 
           <div className="Projects-filters flex items-center">
@@ -43,7 +41,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

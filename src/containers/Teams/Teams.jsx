@@ -9,12 +9,12 @@ import './Teams.scss';
 
 const Teams = () => {
   return (
-    <div className="Teams">
+    <section className="Teams">
       <div className="container">
         <div className="Teams-wrapper">
           <div className="Teams-header">
-            <div className="Teams-subtitle subheading">Teams</div>
-            <div className="Teams-title big-title-02">Meet our team of experts</div>
+            <h3 className="Teams-subtitle subheading">Teams</h3>
+            <h2 className="Teams-title big-title-02">Meet our team of experts</h2>
           </div>
 
           <Carousels
@@ -39,12 +39,12 @@ const Teams = () => {
                 <div className="Teams-carousel-item-avatar">
                   <img src={ImageAvatar} alt="" />
                 </div>
-                <div className="Teams-carousel-item-name heading-03">Tony Ngo</div>
-                <div className="Teams-carousel-item-job small-link-text">CEO</div>
-                <div className="Teams-carousel-item-description description-02">
+                <h4 className="Teams-carousel-item-name heading-03">Tony Ngo</h4>
+                <h5 className="Teams-carousel-item-job small-link-text">CEO</h5>
+                <p className="Teams-carousel-item-description description-02">
                   Co-Founder & CEO of TUN Travel. Tung Do has had over 20 years of experience in the travel industry.
                   With his knowledge and passion, Tung oversees all the business activities and operational processes.
-                </div>
+                </p>
                 <div className="Teams-carousel-item-socials flex justify-center">
                   <a href="#" target="_blank" className="Teams-carousel-item-socials-item">
                     <Icon name={EIconName.LinkedIn} color={EIconColor.PRIMARY_LC_6} />
@@ -58,7 +58,7 @@ const Teams = () => {
           </Carousels>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
