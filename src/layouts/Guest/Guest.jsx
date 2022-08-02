@@ -27,7 +27,7 @@ const Guest = ({ children }) => {
   useEffect(() => {
     setTimeout(() => {
       initBackgroundAnimate();
-    }, 1000);
+    }, 2000);
   }, []);
 
   useEffect(() => {
