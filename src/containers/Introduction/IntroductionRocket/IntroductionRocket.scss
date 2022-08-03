@@ -110,11 +110,17 @@
   }
 
   #stars {
+    position: absolute;
     width: 80vw;
-    height: 100vh;
-    position: fixed;
+    height: 100%;
     top: 0;
-    left: 20%;
-    transform: rotate(140deg)
+    left: 0;
+    transform: translateX(-38%) rotate(140deg);
+
+    @media (max-width: 1200px) {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%) rotate(140deg);
+    }
   }
 }
