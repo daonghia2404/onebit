@@ -74,6 +74,11 @@
     }
 
     &-item {
+      .Icon {
+        width: 28px;
+        height: 28px;
+      }
+
       &:hover {
         .fill {
           fill: $acent-blue;
