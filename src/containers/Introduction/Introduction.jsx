@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import IntroductionCircle from './IntroductionCircle';
 import IntroductionPlan from '@/containers/Introduction/IntroductionPlan';
+import IntroductionRocket from '@/containers/Introduction/IntroductionRocket';
+import ImagePlan from '@/assets/images/image-plane.svg';
+import ImageArrows from '@/assets/images/image-arrows.svg';
+
 import './Introduction.scss';
 
 const Introduction = () => {
+  const [visible, setVisible] = useState(0);
+
+  const handleChangeVisible = () => {
+    setVisible((visible + 1) % 3);
+  };
+
   return (
     <section className="Introduction">
       <div className="container">
@@ -28,9 +38,11 @@ const Introduction = () => {
               <li className="Introduction-list-item description-01">Onebit Crypto advertising</li>
             </ul>
           </div>
-          <div className="Introduction-wrapper-item">
-            <IntroductionPlan />
+          <div className="Introduction-wrapper-item" onClick={handleChangeVisible}>
             {/* <IntroductionCircle /> */}
+            {visible === 0 && <IntroductionRocket />}
+            {visible === 1 && <IntroductionPlan image={ImagePlan} />}
+            {visible === 2 && <IntroductionPlan image={ImageArrows} isArrow />}
           </div>
         </div>
       </div>
