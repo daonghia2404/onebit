@@ -38,11 +38,12 @@ const Introduction = () => {
               <li className="Introduction-list-item description-01">Onebit Crypto advertising</li>
             </ul>
           </div>
-          <div className="Introduction-wrapper-item" onClick={handleChangeVisible}>
+          <div className="Introduction-wrapper-item">
+            <IntroductionRocket />
             {/* <IntroductionCircle /> */}
-            {visible === 0 && <IntroductionRocket />}
+            {/* {visible === 0 && <IntroductionRocket />}
             {visible === 1 && <IntroductionPlan image={ImagePlan} />}
-            {visible === 2 && <IntroductionPlan image={ImageArrows} isArrow />}
+            {visible === 2 && <IntroductionPlan image={ImageArrows} isArrow />} */}
           </div>
         </div>
       </div>
