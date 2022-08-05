@@ -42,7 +42,7 @@ const Ranking = () => {
     if (refCarousel) {
       refCarousel.slickGoTo(currentRank - 1);
     }
-  }, [refCarousel]);
+  }, [refCarousel, currentRank]);
 
   return (
     <section className="Ranking">
@@ -111,7 +111,10 @@ const Ranking = () => {
               >
                 {dataRankingList.map((item) => (
                   <Col key={item.level} className={classNames({ active: item.level === currentRank })}>
-                    <div className={classNames('Ranking-list-image-item', `level-${item.level}`)}>
+                    <div
+                      className={classNames('Ranking-list-image-item', `level-${item.level}`)}
+                      onClick={() => handleChangeCurrentRank(item.level)}
+                    >
                       <img src={item.image} alt="" />
                       <span className="heading-02">Level {item.level}</span>
                     </div>
