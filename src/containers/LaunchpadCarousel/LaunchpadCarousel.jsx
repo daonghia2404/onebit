@@ -11,15 +11,21 @@ import './LaunchpadCarousel.scss';
 
 const LaunchpadCarousel = () => {
   const [refCarousel, setRefCarousel] = useState(null);
+  const [refCarouselBackground, setRefCarouselBackground] = useState(null);
   const [currentIndexCarousel, setCurrentIndexCarousel] = useState(0);
   const wrapperRef = useRef();
 
   const handleAfterChange = (index) => {
     setCurrentIndexCarousel(index);
+    refCarouselBackground.slickGoTo(index);
   };
 
   const handleInitialCarousel = (ref) => {
     setRefCarousel(ref);
+  };
+
+  const handleInitialCarouselBackground = (ref) => {
+    setRefCarouselBackground(ref);
   };
 
   useEffect(() => {
@@ -35,7 +41,18 @@ const LaunchpadCarousel = () => {
       <div className="container">
         <div className="LaunchpadCarousel-wrapper">
           <div className="LaunchpadCarousel-carousel">
-            <div className="LaunchpadCarousel-carousel-bg"></div>
+            <Carousels
+              className="LaunchpadCarousel-carousel-bg"
+              onInit={handleInitialCarouselBackground}
+              slidesToShow={1}
+              dots={false}
+              arrows={false}
+            >
+              {[1, 2, 3].map((item) => (
+                <div className="LaunchpadCarousel-carousel-bg-image"></div>
+              ))}
+            </Carousels>
+
             <Carousels
               onInit={handleInitialCarousel}
               slidesToShow={1}

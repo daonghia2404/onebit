@@ -46,21 +46,25 @@
 
     &-bg {
       display: none;
-      background: url('../../assets/images/bg-lauchpad.png');
-      background-size: cover;
-      background-position: center;
-      z-index: -1;
-      height: 415px;
 
       @media (max-width: 1200px) {
+        pointer-events: none;
         display: block;
-        order: 1;
+        order: 1 !important;
         border-radius: 4px;
         border: 2px solid $acent-blue;
       }
 
-      @media (max-width: 768px) {
-        height: 215px;
+      &-image {
+        background: url('../../assets/images/bg-lauchpad.png');
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+        height: 415px;
+
+        @media (max-width: 768px) {
+          height: 215px;
+        }
       }
     }
 
@@ -87,6 +91,10 @@
       &-wrapper {
         flex: 1;
         position: relative;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         @media (max-width: 1200px) {
           overflow: auto;

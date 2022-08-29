@@ -19,6 +19,7 @@ export const Carousels = ({
   responsive = [],
   autoplay,
   onDragging,
+  slide,
   children,
   onInit,
   beforeChange,
@@ -58,7 +59,7 @@ export const Carousels = ({
   };
   return (
     <div className={classNames('Carousels', className)}>
-      <Slider {...settings} ref={(e) => onInit?.(e)}>
+      <Slider {...settings} slide={slide} ref={(e) => onInit?.(e)}>
         {children}
       </Slider>
     </div>
